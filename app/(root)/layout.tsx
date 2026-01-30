@@ -14,7 +14,6 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <div>
-
       {children}
     </div>
   );
