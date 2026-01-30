@@ -65,7 +65,7 @@ const Hero = () => {
           {/* Text Content - Centered with Animations */}
           <div className="relative z-20 max-w-4xl mx-auto text-center text-white">
             {/* Animated Heading - Word by Word */}
-            <h1 className="text-2xl sm:text-3xl md:text-[50px] font-bold tracking-normal leading-[1.1]">
+            <h1 className="text-xl sm:text-3xl md:text-[50px] font-bold tracking-normal leading-[1.1]">
               {lines.map((line, index) => (
                 <motion.span
                   key={index}
@@ -84,7 +84,7 @@ const Hero = () => {
             </h1>
 
             <motion.p
-              className="mt-4 md:mt-6 text-sm md:text-[16px]  font-medium"
+              className="mt-4 md:mt-6 text-[12px] md:text-[16px]  font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.5, ease: "easeOut" }}
