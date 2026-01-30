@@ -84,7 +84,7 @@ const Hero = () => {
             </h1>
 
             <motion.p
-              className="mt-4 md:mt-6 text-sm md:text-[16px] text-zinc-300 font-medium"
+              className="mt-4 md:mt-6 text-sm md:text-[16px]  font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.5, ease: "easeOut" }}
