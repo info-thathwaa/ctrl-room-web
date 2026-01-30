@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       className="relative w-screen h-screen overflow-hidden bg-cover bg-center px-6 md:px-[98px] py-6"
-      style={{ backgroundImage: "url('/hero/hero-bg.jpg')" }}
+      style={{ backgroundImage: "url('/hero/Hero-bg.webp')" }}
     >
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-30 px-6 md:px-[98px] py-6">
@@ -37,7 +37,7 @@ const Hero = () => {
           {/* Character Image (Desktop) */}
           <div className="hidden md:block absolute left-0 top-1/2 -translate-y-[55%] z-10">
             <Image
-              src="/hero/hero.png"
+              src="/hero/Main.webp"
               alt="Hero Character"
               width={1920}
               height={1080}

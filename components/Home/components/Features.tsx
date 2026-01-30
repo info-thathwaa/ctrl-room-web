@@ -10,25 +10,25 @@ const Features = () => {
       id: "live-watch",
       title: "Live Watch & Map View",
       description: "Track guards, sites, patrol routes in real time",
-      image: "/features/site.png",
+      image: "/features/Overview.webp",
     },
     {
       id: "attendance",
       title: "Smart Attendance & Timesheets",
       description: "GPS, QR, NFC-based check-in/out, instant timesheets",
-      image: "/features/attendance.png",
+      image: "/features/Attendance.webp",
     },
     {
       id: "panic",
       title: "Panic & Incident Management",
       description: "Instant prevention with voice, chat & real-time location",
-      image: "/features/panic.png",
+      image: "/features/panic.webp",
     },
     {
       id: "reports",
       title: "Reports & Analytics",
       description: "Attendance, payroll, incidents, compliance",
-      image: "/features/reports.png",
+      image: "/features/Report.webp",
     },
   ];
 
@@ -90,7 +90,7 @@ const Features = () => {
         {/* Main Content Card */}
         <div className="border rounded-3xl shadow-xl overflow-hidden">
           {/* Image Section */}
-          <div className="rounded-3xl relative h-[250px] md:h-[691px] max-h-[900px] w-full bg-zinc-100">
+          <div className="rounded-3xl relative h-[150px] md:h-[750px] max-h-[900px] w-full bg-zinc-100">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -106,7 +106,7 @@ const Features = () => {
                   height={1080}
                   width={1920}
                   quality={100}
-                  className="object-fit h-full w-full rounded-3xl"
+                  className="object-cover h-full w-full rounded-3xl"
                   priority
                 />
               </motion.div>

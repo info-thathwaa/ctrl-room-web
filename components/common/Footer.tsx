@@ -184,22 +184,22 @@ const Footer = () => {
             <div className="flex flex-wrap gap-2 md:gap-3 mb-6">
               <Link href="https://apps.apple.com" target="_blank">
                 <Image
-                  src="/footer/app-store.png"
+                  src="/footer/appstore.png"
                   alt="Download on App Store"
                   width={120}
                   height={40}
                   quality={100}
-                  className="h-8 md:h-10 w-auto"
+                  className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
                 />
               </Link>
               <Link href="https://play.google.com" target="_blank">
                 <Image
-                  src="/footer/play-store.png"
+                  src="/footer/playstore.png"
                   alt="Get it on Google Play"
                   width={120}
                   height={40}
                   quality={100}
-                  className="h-8 md:h-10 w-auto"
+                  className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
                 />
               </Link>
             </div>

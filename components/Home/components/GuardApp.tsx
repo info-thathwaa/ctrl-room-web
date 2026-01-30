@@ -7,25 +7,25 @@ import { motion } from "framer-motion";
 const GuardApp = () => {
   const features = [
     {
-      icon: "/guardapp/checkin.png",
+      icon: "/guardapp/timer-line.png",
       title: "Smart Check-In & Check-Out",
       description:
         "GPS, QR, and NFC-based attendance to ensure accurate and tamper-proof presence.",
     },
     {
-      icon: "/guardapp/patrol.png",
+      icon: "/guardapp/pushpin-2-line.png",
       title: "Patrols & Checkpoints",
       description:
         "Guided patrol routes with live checkpoint validation and delay alerts.",
     },
     {
-      icon: "/guardapp/panic.png",
+      icon: "/guardapp/alarm-warning-line.png",
       title: "Panic & Incident Reporting",
       description:
         "One-tap panic alerts with live location, photos, and instant escalation.",
     },
     {
-      icon: "/guardapp/task.png",
+      icon: "/guardapp/file-text-line.png",
       title: "Task & Duty Visibility",
       description:
         "Guards can clearly see assigned shifts, patrols, and responsibilities in one place.",
@@ -88,7 +88,7 @@ const GuardApp = () => {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Left - Phone Mockup */}
           <motion.div
             className="flex justify-center lg:justify-end"
@@ -97,10 +97,10 @@ const GuardApp = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={phoneVariants}
           >
-            <div className="relative w-full max-w-[350px] aspect-[9/16] bg-gradient-to-br from-[#03353B] to-[#024449] rounded-[40px] p-4 shadow-2xl">
+            <div className="relative w-full h-[472px] max-h-[472px] max-w-[505px]">
               <div className="relative w-full h-full rounded-[32px] overflow-hidden bg-white">
                 <Image
-                  src="/guardapp/phone-mockup.png"
+                  src="/guardapp/Guradapp-screen.webp"
                   alt="Guard App Interface"
                   fill
                   quality={100}
@@ -113,7 +113,7 @@ const GuardApp = () => {
 
           {/* Right - Features List */}
           <motion.div
-            className="space-y-6"
+            className="flex flex-col justify-between space-y-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -122,15 +122,15 @@ const GuardApp = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-4"
+                className="flex  items-start gap-4"
                 variants={itemVariants}
               >
-                <div className="w-14 h-14 shrink-0 bg-[#03353B] rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 md:w-[80px] md:h-[80px] shrink-0 bg-[#03353B] rounded-2xl flex items-center justify-center">
                   <Image
                     src={feature.icon}
                     alt={feature.title}
-                    width={28}
-                    height={28}
+                    width={32}
+                    height={32}
                     quality={100}
                     className="object-contain brightness-0 invert"
                   />

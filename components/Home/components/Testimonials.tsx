@@ -9,21 +9,21 @@ const Testimonials = () => {
     {
       name: "Albin Mathews",
       role: "Administrator",
-      avatar: "/testimonials/avatar1.png",
+      avatar: "/testimonial/avatar1.png",
       review:
         "The Ctrl Room Software Is Really User Friendly, And I Believe It Is Superior To The Current System. The Design Is Fantastic, And It Minimizes Paperwork, Which Is Beneficial To Both The Manager And The Employee. I Am Quite Delighted With The System.",
     },
     {
       name: "Sherly Thomas",
       role: "HR",
-      avatar: "/testimonials/avatar2.png",
+      avatar: "/testimonial/avatar2.png",
       review:
         "I Am So Smitten With The Ctrl Room. Automated ID Creation Of Employee Was Perfect. The Payroll Part Was Really Appreciable. I Am Impressed",
     },
     {
       name: "Sona Pouline",
       role: "Manager",
-      avatar: "/testimonials/avatar3.png",
+      avatar: "/testimonial/avatar3.png",
       review:
         "Ctrl Room Is The Greatest Workforce Management System, With Many Features Such As Automated Employee And Manager ID Creation. There Are Three Levels Of Users: Admin, Manager, And Guard.",
     },
@@ -65,7 +65,7 @@ const Testimonials = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 30,
+                duration: 200,
                 ease: "linear",
               },
             }}
@@ -73,7 +73,7 @@ const Testimonials = () => {
             {duplicatedReviews.map((review, index) => (
               <motion.div
                 key={index}
-                className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-zinc-200 flex-shrink-0"
+                className="max-w-[250px] sm:min-w-[220px] md:min-w-[390px] md:max-w-[390px] bg-white rounded-2xl p-5 md:p-8 border border-[#DEDEDE] flex-shrink-0"
                 whileHover={{
                   scale: 1.02,
                   boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
@@ -81,18 +81,18 @@ const Testimonials = () => {
                 transition={{ duration: 0.2 }}
               >
                 {/* User Info */}
-                <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-zinc-200 flex-shrink-0">
+                <div className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
+                  <div className="w-10 h-10 md:w-[71px] md:h-[71px] rounded-full overflow-hidden bg-zinc-200 flex-shrink-0">
                     <Image
                       src={review.avatar}
                       alt={review.name}
-                      width={48}
-                      height={48}
+                      width={56}
+                      height={56}
                       quality={100}
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-1 justify-center">
                     <h3 className="text-base md:text-lg font-bold text-black">
                       {review.name}
                     </h3>

@@ -7,25 +7,25 @@ import { motion } from "framer-motion";
 const WhyCtrlRoom = () => {
   const features = [
     {
-      icon: "/why/realtime.png",
+      icon: "/whyctrl/timer-line.png",
       title: "Real-Time Visibility",
       description:
         "Track guards, sites, patrols, and incidents live as they happen, not after the shift ends.",
     },
     {
-      icon: "/why/compliance.png",
+      icon: "/whyctrl/shield-user-line.png",
       title: "Compliance Made Simple",
       description:
         "Automate attendance proof, license tracking, SOP adherence, and audit-ready records.",
     },
     {
-      icon: "/why/field.png",
+      icon: "/whyctrl/settings-line.png",
       title: "Built For Field Operations",
       description:
         "Designed for real-world conditions with mobile-first workflows, offline support, and verified check-ins.",
     },
     {
-      icon: "/why/scales.png",
+      icon: "/whyctrl/file-chart-line.png",
       title: "Scales Without Complexity",
       description:
         "Easily manage multiple clients, sites, events, and teams from a single unified platform.",
@@ -91,15 +91,15 @@ const WhyCtrlRoom = () => {
                 className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
                 variants={itemVariants}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex-shrink-0 bg-zinc-100 rounded-xl flex items-center justify-center">
+                <div className="flex flex-col items-start gap-4">
+                  <div className="md:w-[35px] md:h-[35px] w-[24px] h-[24px] flex-shrink-0  rounded-xl flex items-center justify-center">
                     <Image
                       src={feature.icon}
                       alt={feature.title}
-                      width={24}
-                      height={24}
+                      width={35}
+                      height={35}
                       quality={100}
-                      className="object-contain"
+                      className="object-contain w-full h-full"
                     />
                   </div>
                   <div>
@@ -122,7 +122,7 @@ const WhyCtrlRoom = () => {
           >
             <div className="relative w-full max-w-[400px] aspect-square bg-gradient-to-br from-[#03353B] to-[#024449] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/whyctrl/main-illustration.png"
+                src="/whyctrl/main-illustration.webp"
                 alt="Ctrl-Room Illustration"
                 fill
                 quality={100}
@@ -140,14 +140,15 @@ const WhyCtrlRoom = () => {
                 className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
                 variants={itemVariants}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex-shrink-0 bg-zinc-100 rounded-xl flex items-center justify-center">
+                <div className="flex flex-col items-start gap-4">
+                  <div className="md:w-[35px] md:h-[35px] w-[24px] h-[24px] flex-shrink-0  rounded-xl flex items-center justify-center">
                     <Image
                       src={feature.icon}
                       alt={feature.title}
-                      width={24}
-                      height={24}
-                      className="object-contain"
+                      width={35}
+                      height={35}
+                      quality={100}
+                      className="object-contain w-full h-full"
                     />
                   </div>
                   <div>

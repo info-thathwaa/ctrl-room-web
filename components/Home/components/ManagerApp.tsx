@@ -7,25 +7,25 @@ import { motion } from "framer-motion";
 const ManagerApp = () => {
   const features = [
     {
-      icon: "/managerapp/monitoring.png",
+      icon: "/managerapp/map-2-line.png",
       title: "Live Site & Guard Monitoring",
       description:
         "View active sites, guards on duty, and real-time movement at a glance.",
     },
     {
-      icon: "/managerapp/shift.png",
+      icon: "/managerapp/calendar-2-line.png",
       title: "Shift & Attendance Oversight",
       description:
         "Approve shifts, correct attendance, and track ongoing work instantly.",
     },
     {
-      icon: "/managerapp/requests.png",
+      icon: "/managerapp/file-text-line.png",
       title: "Requests & Approvals",
       description:
         "Handle leave requests, document approvals, and shift changes on the go.",
     },
     {
-      icon: "/managerapp/alerts.png",
+      icon: "/managerapp/alarm-warning-line.png",
       title: "Alerts & Escalations",
       description:
         "Receive panic alerts, incident updates, and operational notifications in real time.",
@@ -88,10 +88,10 @@ const ManagerApp = () => {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Left - Features List */}
           <motion.div
-            className="space-y-6"
+            className="flex flex-col justify-between space-y-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -100,15 +100,15 @@ const ManagerApp = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-4"
+                className="flex  items-start gap-4"
                 variants={itemVariants}
               >
-                <div className="w-14 h-14 shrink-0 bg-[#03353B] rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 md:w-[80px] md:h-[80px] shrink-0 bg-[#03353B] rounded-2xl flex items-center justify-center">
                   <Image
                     src={feature.icon}
                     alt={feature.title}
-                    width={28}
-                    height={28}
+                    width={32}
+                    height={32}
                     quality={100}
                     className="object-contain brightness-0 invert"
                   />
@@ -133,10 +133,10 @@ const ManagerApp = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={phoneVariants}
           >
-            <div className="relative w-full max-w-[350px] aspect-[9/16] bg-gradient-to-br from-[#03353B] to-[#024449] rounded-[40px] p-4 shadow-2xl">
+            <div className="relative w-full h-[472px] max-h-[472px] max-w-[505px]">
               <div className="relative w-full h-full rounded-[32px] overflow-hidden bg-white">
                 <Image
-                  src="/managerapp/phone-mockup.png"
+                  src="/managerapp/managerapp-screen.webp"
                   alt="Manager App Interface"
                   fill
                   quality={100}
