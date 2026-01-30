@@ -1,10 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Testimonials = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const reviews = [
     {
       name: "Albin Mathews",
@@ -58,22 +64,26 @@ const Testimonials = () => {
         <div className="flex">
           <motion.div
             className="flex gap-4 md:gap-6"
+            initial={{ opacity: 0 }}
             animate={{
-              x: [0, -100 * reviews.length + "%"],
+              opacity: isMounted ? 1 : 0,
+              x: isMounted ? [`0%`, `-${100 / 3}%`] : 0,
             }}
             transition={{
+              opacity: { duration: 0.3 },
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 200,
+                duration: 60,
                 ease: "linear",
+                delay: 0.3,
               },
             }}
           >
             {duplicatedReviews.map((review, index) => (
               <motion.div
                 key={index}
-                className="max-w-[250px] sm:min-w-[220px] md:min-w-[390px] md:max-w-[390px] bg-white rounded-2xl p-5 md:p-8 border border-[#DEDEDE] flex-shrink-0"
+                className="max-w-[250px] sm:min-w-[220px] md:min-w-[390px] md:max-w-[390px] lg:max-w-[390px] bg-white rounded-2xl p-5 md:p-8 border border-[#DEDEDE] flex-shrink-0"
                 whileHover={{
                   scale: 1.02,
                   boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
