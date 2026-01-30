@@ -34,7 +34,7 @@ const Features = () => {
 
   const [activeTab, setActiveTab] = useState(0);
 
-  // Auto-carousel: change tab every 3 seconds
+  // Auto-carousel: change tab every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % tabs.length);
@@ -60,6 +60,30 @@ const Features = () => {
     exit: {
       opacity: 0,
       scale: 1.05,
+      transition: {
+        duration: 0.3,
+        ease: "easeIn" as const,
+      },
+    },
+  };
+
+  // Content transition variants for mobile
+  const contentVariants = {
+    enter: {
+      opacity: 0,
+      y: 10,
+    },
+    center: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut" as const,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
       transition: {
         duration: 0.3,
         ease: "easeIn" as const,
@@ -98,7 +122,22 @@ const Features = () => {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="absolute inset-0 "
+                className="absolute inset-0"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = Math.abs(offset.x) * velocity.x;
+                  if (swipe < -10000) {
+                    // Swipe left - next tab
+                    setActiveTab((prev) => (prev + 1) % tabs.length);
+                  } else if (swipe > 10000) {
+                    // Swipe right - previous tab
+                    setActiveTab(
+                      (prev) => (prev - 1 + tabs.length) % tabs.length,
+                    );
+                  }
+                }}
               >
                 <Image
                   src={tabs[activeTab].image}
@@ -106,15 +145,49 @@ const Features = () => {
                   height={1080}
                   width={1920}
                   quality={100}
-                  className="object-cover h-full w-full rounded-3xl"
+                  className="object-cover h-full w-full rounded-3xl pointer-events-none"
                   priority
                 />
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Tabs Section - Bottom */}
-          <div className="bg-[#03353B] px-6 md:px-12 py-8">
+          {/* Mobile: Active Tab Content Below Image */}
+          <div className="md:hidden bg-[#03353B] px-6 py-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                variants={contentVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="text-center"
+              >
+                <h3 className="text-lg font-bold text-white mb-2">
+                  {tabs[activeTab].title}
+                </h3>
+                <p className="text-sm text-zinc-300">
+                  {tabs[activeTab].description}
+                </p>
+
+                {/* Dot Indicators */}
+                <div className="flex justify-center gap-2 mt-4">
+                  {tabs.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveTab(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        activeTab === index ? "bg-white w-6" : "bg-white/30"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Desktop: Tabs Section - Bottom */}
+          <div className="hidden md:block bg-[#03353B] px-6 md:px-12 py-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-l border-white/20">
               {tabs.map((tab, index) => (
                 <motion.button
@@ -142,21 +215,6 @@ const Features = () => {
                   >
                     {tab.description}
                   </p>
-
-                  {/* Progress Bar */}
-                  {/* {activeTab === index && (
-                    <div className="mt-4 h-1 bg-white/20 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-white"
-                        initial={{ width: "0%" }}
-                        animate={{ width: "100%" }}
-                        transition={{
-                          duration: 3,
-                          ease: "linear" as const,
-                        }}
-                      />
-                    </div>
-                  )} */}
                 </motion.button>
               ))}
             </div>
