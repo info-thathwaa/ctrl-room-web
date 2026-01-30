@@ -87,7 +87,7 @@ const Hero = () => {
               className="mt-4 md:mt-6 text-sm md:text-[16px]  font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 2.5, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 1.5, ease: "easeOut" }}
             >
               Manage guards, sites, patrols, incidents, and compliance from a{" "}
               <br />
@@ -98,7 +98,7 @@ const Hero = () => {
               className="mt-6 md:mt-10"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 3, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 1.5, ease: "easeOut" }}
             >
               <button className="bg-white text-[#03353B] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl shadow-black/20 hover:bg-zinc-100 transition active:scale-95">
                 Request a Live Demo →
