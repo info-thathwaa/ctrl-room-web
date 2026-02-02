@@ -66,8 +66,8 @@ const Home = () => {
       >
         <ManagerApp />
       </motion.div>
-
-      <motion.div
+{/* This is a comment in JSX
+<motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -75,6 +75,9 @@ const Home = () => {
       >
         <Testimonials />
       </motion.div>
+*/}
+
+       
     </>
   );
 };
