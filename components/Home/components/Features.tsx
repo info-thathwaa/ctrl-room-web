@@ -114,7 +114,7 @@ const Features = () => {
         {/* Main Content Card */}
         <div className="border rounded-3xl shadow-xl overflow-hidden">
           {/* Image Section */}
-          <div className="rounded-3xl relative h-[150px] md:h-[750px] lg:h-[700px] max-h-[900px] w-full bg-zinc-100">
+          <div className="relative w-full aspect-[16/9] rounded-3xl bg-zinc-100 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
