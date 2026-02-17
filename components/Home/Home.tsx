@@ -8,6 +8,7 @@ import WhyCtrlRoom from "./components/WhyCtrlRoom";
 import GuardApp from "./components/GuardApp";
 import ManagerApp from "./components/ManagerApp";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -66,7 +67,7 @@ const Home = () => {
       >
         <ManagerApp />
       </motion.div>
-{/* This is a comment in JSX
+      {/* This is a comment in JSX
 <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -77,7 +78,14 @@ const Home = () => {
       </motion.div>
 */}
 
-       
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Contact />
+      </motion.div>
     </>
   );
 };
