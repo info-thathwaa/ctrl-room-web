@@ -10,7 +10,7 @@ const Hero = () => {
   ];
   return (
     <section
-      className="relative w-screen h-screen overflow-hidden bg-cover bg-center"
+      className="relative w-full h-screen overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/hero/Hero-bg.webp')" }}
     >
       <Header variant="transparent" />

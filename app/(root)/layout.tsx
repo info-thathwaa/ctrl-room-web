@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <div className="overflow-x-hidden">
+    <>
       {children}
-    </div>
+    </>
   );
 }

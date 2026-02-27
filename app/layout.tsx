@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased overflow-x-hidden`}>
+      <body className={`${inter.variable} antialiased`}>
         <TooltipProvider>
           {children}
           <Toaster />
