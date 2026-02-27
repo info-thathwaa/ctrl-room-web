@@ -34,7 +34,7 @@ const Contact = () => {
           src="/contact/blue_curve.svg"
           alt="Decorative Curve Left"
           fill
-          className="object-contain object-left-top"
+          className="object-contain object-top-left"
           priority
         />
       </div>
@@ -45,7 +45,7 @@ const Contact = () => {
           src="/contact/yellow_curve.svg"
           alt="Decorative Curve Right"
           fill
-          className="object-contain object-right-top"
+          className="object-contain object-top-right"
           priority
         />
       </div>
@@ -168,12 +168,12 @@ const Contact = () => {
         </motion.div>
 
         {/* Info Cards */}
-        <div className="max-w-[900px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-items-center">
+        <div className="max-w-[900px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-items-center relative z-30">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white p-8 lg:p-10 rounded-[35px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center space-y-4 w-full lg:w-[400px] lg:h-[234px] flex-shrink-0"
+            className="bg-white p-8 lg:p-10 rounded-[35px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center space-y-4 w-full lg:w-[400px] lg:h-[234px] shrink-0"
           >
             <div className="w-16 h-16 rounded-2xl bg-[#E8F5E9] flex items-center justify-center">
               <Mail className="w-8 h-8 text-[#4CAF50]" />
@@ -192,7 +192,7 @@ const Contact = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="bg-white p-8 lg:p-10 rounded-[35px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center space-y-4 w-full lg:w-[400px] lg:h-[234px] flex-shrink-0"
+            className="bg-white p-8 lg:p-10 rounded-[35px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center space-y-4 w-full lg:w-[400px] lg:h-[234px] shrink-0"
           >
             <div className="w-16 h-16 rounded-2xl bg-[#FEEBEE] flex items-center justify-center">
               <Phone className="w-8 h-8 text-[#FF5252]" />
@@ -208,12 +208,12 @@ const Contact = () => {
       </section>
 
       {/* World Map Section */}
-      <section className="relative w-full max-w-6xl mx-auto h-[400px] md:h-[600px] mt-10 p-10 pointer-events-none">
+      <section className="relative w-full max-w-6xl mx-auto h-[400px] md:h-[600px] -mt-24 lg:-mt-32 -mb-20 lg:-mb-32 p-10 pointer-events-none">
         <Image
           src="/contact/map.svg"
           alt="World Map"
           fill
-          className="object-contain opacity-70"
+          className="object-contain"
         />
         {/* Indicators (Flags matching design markers) */}
         {/* UK */}
