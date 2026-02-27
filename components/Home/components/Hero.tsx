@@ -1,12 +1,8 @@
-"use client";
-
+import Header from "@/components/common/Header";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const text =
-    "Real-Time Workforce & Security Operations — One Powerful Control Room";
-  const words = text.split(" ");
   const lines = [
     "Real-Time Workforce & Security",
     "Operations — One Powerful",
@@ -14,32 +10,12 @@ const Hero = () => {
   ];
   return (
     <section
-      className="relative w-screen h-screen overflow-hidden bg-cover bg-center px-6 md:px-[98px] py-6"
+      className="relative w-screen h-screen overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/hero/Hero-bg.webp')" }}
     >
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-30 px-6 md:px-[98px] py-6">
-        <div className="flex items-center justify-between">
-          <Image
-            src="/logo.png"
-            alt="Ctrl Room Logo"
-            width={120}
-            height={87}
-            quality={100}
-            className="w-[60px] h-auto md:w-[97px] md:h-[87px]"
-            priority
-          />
+      <Header variant="transparent" />
 
-          <div className="flex items-center gap-2 md:gap-4">
-            <button className="text-white text-sm md:text-base font-medium hover:text-zinc-300 transition">
-              Contact Us
-            </button>
-            <button className="bg-white text-[#03353B] px-4 py-2 md:px-6 md:py-2 rounded-full text-xs md:text-base font-medium hover:bg-zinc-100 transition active:scale-95">
-              Login
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Hero Content */}
 
       {/* Hero Content */}
       <div className="relative z-50 flex h-full items-end justify-center">

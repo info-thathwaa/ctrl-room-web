@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "CTRL-Room - Real-Time Workforce & Security Operations",
 };
 
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/common/Footer";
 
 export default function RootLayout({
@@ -22,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased overflow-x-hidden`}>
-        {children}
+        <TooltipProvider>
+          {children}
+          <Toaster />
+        </TooltipProvider>
         <Footer />
       </body>
     </html>
