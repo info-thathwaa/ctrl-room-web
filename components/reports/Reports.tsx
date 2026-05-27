@@ -155,16 +155,14 @@ const Reports = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <div className="border border-zinc-200 rounded-2xl shadow-md bg-white overflow-hidden p-1">
-                <div className="relative aspect-[16/11] w-full bg-zinc-50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/features/attendance.png"
-                    alt="Check-In / Check-Out Logs"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 flex justify-end">
+              <div className="relative w-full aspect-[1.45] max-w-[540px]">
+                <Image
+                  src="/features/attendance.png"
+                  alt="Check-In / Check-Out Logs"
+                  fill
+                  className="object-contain object-right"
+                />
               </div>
             </div>
           </motion.div>
@@ -204,16 +202,14 @@ const Reports = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <div className="border border-zinc-200 rounded-2xl shadow-md bg-white overflow-hidden p-1">
-                <div className="relative aspect-[16/11] w-full bg-zinc-50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/features/site.png"
-                    alt="Site Point Logs"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 flex justify-end">
+              <div className="relative w-full aspect-[1.45] max-w-[540px]">
+                <Image
+                  src="/features/site.png"
+                  alt="Site Point Logs"
+                  fill
+                  className="object-contain object-right"
+                />
               </div>
             </div>
           </motion.div>
@@ -241,16 +237,14 @@ const Reports = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <div className="border border-zinc-200 rounded-2xl shadow-md bg-white overflow-hidden p-1">
-                <div className="relative aspect-[16/11] w-full bg-zinc-50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/features/reports.png"
-                    alt="Daily Occurrence Report"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 flex justify-end">
+              <div className="relative w-full aspect-[1.45] max-w-[540px]">
+                <Image
+                  src="/features/reports.png"
+                  alt="Daily Occurrence Report"
+                  fill
+                  className="object-contain object-right"
+                />
               </div>
             </div>
           </motion.div>
@@ -291,16 +285,14 @@ const Reports = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <div className="border border-zinc-200 rounded-2xl shadow-md bg-white overflow-hidden p-1">
-                <div className="relative aspect-[16/11] w-full bg-zinc-50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/features/Report.webp"
-                    alt="Shifts Reports"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 flex justify-end">
+              <div className="relative w-full aspect-[1.45] max-w-[540px]">
+                <Image
+                  src="/features/Report.webp"
+                  alt="Shifts Reports"
+                  fill
+                  className="object-contain object-right"
+                />
               </div>
             </div>
           </motion.div>
@@ -340,16 +332,14 @@ const Reports = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <div className="border border-zinc-200 rounded-2xl shadow-md bg-white overflow-hidden p-1">
-                <div className="relative aspect-[16/11] w-full bg-zinc-50 rounded-xl overflow-hidden">
-                  <Image
-                    src="/features/panic.png"
-                    alt="Staff License Renewal Report"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 flex justify-end">
+              <div className="relative w-full aspect-[1.45] max-w-[540px]">
+                <Image
+                  src="/features/panic.png"
+                  alt="Staff License Renewal Report"
+                  fill
+                  className="object-contain object-right"
+                />
               </div>
             </div>
           </motion.div>
