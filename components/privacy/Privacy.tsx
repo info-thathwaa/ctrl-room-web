@@ -18,7 +18,7 @@ const Privacy = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center px-4 z-20"
         >
-          <h1 className="text-3xl md:text-[42px] font-bold text-[#03353B] leading-tight">
+          <h1 className="text-3xl md:text-[42px] font-bold leading-tight">
             Privacy Policy
           </h1>
         </motion.div>
@@ -32,7 +32,7 @@ const Privacy = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-lg md:text-[20px] font-medium text-[#03353B] leading-[1.8] text-justify md:text-left">
+          <p className="text-lg md:text-[20px] font-medium  leading-[1.8] text-justify md:text-left">
             Aegis.Inc. (referred as “us”, “we” or “AEGIS” in document below)
             assures its customers and users with the security in handling their
             personal information. This Privacy policy will describe on how we
@@ -69,7 +69,7 @@ const Privacy = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6"
         >
-          <h2 className="text-[28px] md:text-[40px] font-semibold text-[#03353B] leading-tight">
+          <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight">
             Our Business Model With Your Organisation?
           </h2>
           
@@ -91,7 +91,7 @@ const Privacy = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6"
         >
-          <h2 className="text-[28px] md:text-[40px] font-semibold text-[#03353B] leading-tight">
+          <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight">
             The Information We Collect & How We Use It
           </h2>
 
@@ -103,7 +103,7 @@ const Privacy = () => {
               A Manager is hence entered into our system via Company admin/your employer and information includes concerned managers name, address, profile photo, phone no. & Email .We can access its information to debug or help the user to enhance the experience when a ticket is generated with us. A Manager also adds a site along with geofencing, address, site supervisor and client’s mail and contact info. Also manager can add a security guard using his personal and contact details in AEGIS ManagerApp using guard name, photo, address, and their security licence details. A Security Guard can request to update his information via the AEGIS StaffApp which is entered into our system by their concerned manager using AEGIS ManagerApp or webManagerApp.
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               Information Collected by AEGIS products (both fed by user or automatically collected)
             </p>
             <p>
@@ -119,7 +119,7 @@ const Privacy = () => {
               <strong>Storage:</strong> All AEGIS product needs access to storage to upload any photo or file attachment in our system from the storage as an extra option. This enables users to easily access the images in memory to be attached where ever necessary. We always crop and compress the pics in storage to keep the system fast for users
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               How We Use this information
             </p>
             <p>
@@ -129,7 +129,7 @@ const Privacy = () => {
               Your information is stored and processed in countries where we have facilities or where we provide services. By using this app, your consent to transfer information in that country which may be different from your country is given to us. AEGIS will maintain all user records in system as long as they are required by laws , regulations , or government orders
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               Payment methods:
             </p>
             <p>
@@ -148,21 +148,21 @@ const Privacy = () => {
               Terms remain valid even after close of agreement with your company.
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               Right to Update/Change agreement:
             </p>
             <p>
               AEGIS holds full right to update this privacy policy from time to time to introduce changes in technologies we use, legal requirements or any other factors. The updation date will be mentioned next to the title of this page. To revoke your access from the App, users require to connect with concerned manager in hierarchy to stop the services. If there is any major update in privacy policy, then we are obliged to intimate the user by mail as per law.
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               Third party information exchange:
             </p>
             <p>
               No information is shared with any third party except within the AEGIS trust and development modules. No third party will have access to the application without the credentials. Data is not visible from one company in contract with us to another company.
             </p>
             
-            <p className="font-semibold text-[#03353B] mt-2">
+            <p className="font-semibold mt-2">
               User Rights:
             </p>
             <p>
