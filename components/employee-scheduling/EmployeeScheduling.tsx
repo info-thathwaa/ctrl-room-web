@@ -129,7 +129,7 @@ const EmployeeScheduling = () => {
                 className="object-contain object-right"
               />
               {/* Overlaid mobile shift creation view */}
-              <div className="absolute right-[5%] bottom-[-20%] w-[40%] h-[68%] z-10">
+              <div className="absolute right-[5%] bottom-[-5%] lg:bottom-[-20%] w-[40%] h-[68%] z-10">
                 <Image
                   src="/scheduling/Create_Shift.svg"
                   alt="Create New Shift Sheet"
