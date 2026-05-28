@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <Link
-                  href="/demo"
+                  href="/#contact"
                   className="text-sm md:text-base text-zinc-400 hover:text-white transition"
                 >
                   Request For Demo
@@ -148,7 +148,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/#contact"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Careers
