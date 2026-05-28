@@ -60,7 +60,7 @@ const About = () => {
   };
 
   return (
-    <div className="py-[75px] bg-white px-6 md:px-[98px]">
+    <div className="py-[75px] bg-white px-6 md:px-[98px] overflow-hidden">
       <div className="container mx-auto">
         {/* Title Section */}
         <motion.div

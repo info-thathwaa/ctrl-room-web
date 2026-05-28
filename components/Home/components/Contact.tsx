@@ -58,7 +58,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="py-[75px] bg-white px-6 md:px-[312px]">
+    <div id="contact" className="py-[75px] bg-white px-6 md:px-[312px] overflow-hidden">
       <div className="container mx-auto">
         {/* Title Section */}
         <motion.div

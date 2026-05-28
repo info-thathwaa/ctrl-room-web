@@ -1,7 +1,10 @@
+"use client";
+
 import React, { useState } from "react";
 import { ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   className?: string;
@@ -15,6 +18,7 @@ const Header = ({
   logo = "transparent",
 }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const isTransparent = variant === "transparent";
   const isLogoTransparent = logo === "transparent";
@@ -22,6 +26,22 @@ const Header = ({
   const navText = isLogoTransparent
     ? "text-white md:hover:text-zinc-300"
     : "text-[#03353B] md:hover:text-[#022a2e]";
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#")) {
+      const targetId = href.substring(2);
+      if (pathname === "/" || pathname === "/Home") {
+        e.preventDefault();
+        setMobileMenuOpen(false);
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        setMobileMenuOpen(false);
+      }
+    }
+  };
 
   return (
     <div
@@ -56,7 +76,11 @@ const Header = ({
             Home
           </Link>
 
-          <Link href="/features" className={`${navText}`}>
+          <Link 
+            href="/#features" 
+            className={`${navText}`}
+            onClick={(e) => handleLinkClick(e, "/#features")}
+          >
             Features
           </Link>
 
@@ -64,11 +88,19 @@ const Header = ({
             About Us
           </Link>
 
-          <Link href="/careers" className={`${navText}`}>
+          <Link 
+            href="/#contact" 
+            className={`${navText}`}
+            onClick={(e) => handleLinkClick(e, "/#contact")}
+          >
             Careers
           </Link>
 
-          <Link href="/demo" className={`${navText}`}>
+          <Link 
+            href="/#contact" 
+            className={`${navText}`}
+            onClick={(e) => handleLinkClick(e, "/#contact")}
+          >
             Request For Demo
           </Link>
         </nav>
@@ -137,11 +169,11 @@ const Header = ({
               </Link>
 
               <Link
-                href="/features"
+                href="/#features"
                 className={`py-3 border-b border-white/10 ${
                   isTransparent ? "text-white" : "text-[#03353B]"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, "/#features")}
               >
                 Features
               </Link>
@@ -157,21 +189,21 @@ const Header = ({
               </Link>
 
               <Link
-                href="/careers"
+                href="/#contact"
                 className={`py-3 border-b border-white/10 ${
                   isTransparent ? "text-white" : "text-[#03353B]"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, "/#contact")}
               >
                 Careers
               </Link>
 
               <Link
-                href="/demo"
+                href="/#contact"
                 className={`py-3 border-b border-white/10 ${
                   isTransparent ? "text-white" : "text-[#03353B]"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, "/#contact")}
               >
                 Request For Demo
               </Link>
