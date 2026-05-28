@@ -92,7 +92,7 @@ const Features = () => {
   };
 
   return (
-    <div className="py-[75px] bg-[#03353B] p-[24px] md:p-[98px]">
+    <div id="features" className="py-[75px] bg-[#03353B] p-[24px] md:p-[98px]">
       <div className="container mx-auto">
         {/* Title Section */}
         <motion.div

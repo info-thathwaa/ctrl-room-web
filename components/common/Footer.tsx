@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <Link
-                  href="/demo"
+                  href="/#contact"
                   className="text-sm md:text-base text-zinc-400 hover:text-white transition"
                 >
                   Request For Demo
@@ -73,14 +73,14 @@ const Footer = () => {
                   Employee Scheduling
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/task-management"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Task Management
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/gps-geofencing"
@@ -116,44 +116,44 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/get-in-touch"
+                  href="/contact"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Get In touch
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/pricing"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Pricing
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="/faqs"
+                  href="/terms"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   FAQs
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/customer-stories"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Customer Stories
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
-                  href="/careers"
+                  href="/#contact"
                   className="text-zinc-400 hover:text-white transition"
                 >
                   Careers
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

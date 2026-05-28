@@ -57,7 +57,7 @@ const WhyCtrlRoom = () => {
   };
 
   return (
-    <div className="py-[75px] bg-white p-[24px] md:p-[98px]">
+    <div className="py-[75px] bg-white p-[24px] md:p-[98px] overflow-hidden">
       <div className="container mx-auto">
         {/* Title Section */}
         <motion.div

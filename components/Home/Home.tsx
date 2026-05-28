@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Features from "./components/Features";
@@ -12,8 +12,21 @@ import Contact from "./components/Contact";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      const timer = setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
-    <>
+    <div className="overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -86,7 +99,7 @@ const Home = () => {
       >
         <Contact />
       </motion.div>
-    </>
+    </div>
   );
 };
 
