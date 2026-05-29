@@ -7,9 +7,8 @@ import Image from "next/image";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
-import { toast } from "sonner";
 import { TextInput } from "@/components/custom-inputs/TextInput";
+import { useSubmitContact } from "@/api/contact/Mutattion";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -34,7 +33,7 @@ const formSchema = z.object({
 type ContactFormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { mutate, isPending } = useSubmitContact();
 
   const methods = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -47,35 +46,12 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true);
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to send message.");
-      }
-
-      toast.success("Thank you! Your message has been sent successfully.");
-      methods.reset();
-    } catch (error) {
-      console.error(error);
-      const errorMessage =
-        error instanceof Error
-          ? error.message
-          : "Failed to send message. Please try again.";
-      toast.error(errorMessage);
-    } finally {
-      setIsSubmitting(false);
-    }
+  const onSubmit = (data: ContactFormValues) => {
+    mutate(data, {
+      onSuccess: () => {
+        methods.reset();
+      },
+    });
   };
 
   return (
@@ -213,10 +189,10 @@ const Contact = () => {
               <div className="md:col-span-2 flex justify-center mt-6">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isPending}
                   className="bg-[#03353B] text-white px-12 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#022a2e] transition-all active:scale-95 group shadow-lg shadow-[#03353B]/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                  {isPending ? "Submitting..." : "Submit"}
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

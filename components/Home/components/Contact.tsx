@@ -10,28 +10,31 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
 import { TextInput } from "@/components/custom-inputs/TextInput";
+import { useSubmitContact } from "@/api/contact/Mutattion";
 
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
-  phone: z.string().min(10, {
-    message: "Phone number must be at least 10 characters.",
-  }),
-  email: z
+  phone: z
     .string()
-    .email({
-      message: "Please enter a valid email address.",
-    })
     .optional()
-    .or(z.literal("")),
-  company: z.string().optional(),
+    .or(z.literal(""))
+    .refine((val) => !val || val.length >= 10, {
+      message: "Phone number must be at least 10 characters.",
+    }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  company: z.string().optional().or(z.literal("")),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
 });
 
 const Contact = () => {
+  const { mutate, isPending } = useSubmitContact();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,9 +47,11 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    mutate(values, {
+      onSuccess: () => {
+        form.reset();
+      },
+    });
   }
 
   return (
@@ -92,10 +97,10 @@ const Contact = () => {
                     className="bg-zinc-50 border-none px-4 py-6"
                   />
 
-                  {/* Phone Number */}
+                   {/* Phone Number */}
                   <TextInput
                     name="phone"
-                    label={<>Phone Number <span className="text-red-500">*</span></>}
+                    label="Phone Number"
                     placeholder="Phone Number"
                     className="bg-zinc-50 border-none px-4 py-6"
                   />
@@ -104,7 +109,7 @@ const Contact = () => {
                   <TextInput
                     name="email"
                     type="email"
-                    label="Email"
+                    label={<>Email <span className="text-red-500">*</span></>}
                     placeholder="Email"
                     className="bg-zinc-50 border-none px-4 py-6"
                   />
@@ -133,9 +138,10 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="bg-[#03353B] text-white hover:bg-[#022c30] rounded-full px-10 py-6 text-base"
+                    disabled={isPending}
+                    className="bg-[#03353B] text-white hover:bg-[#022c30] rounded-full px-10 py-6 text-base disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit &gt;
+                    {isPending ? "Submitting..." : "Submit >"}
                   </Button>
                 </div>
               </form>

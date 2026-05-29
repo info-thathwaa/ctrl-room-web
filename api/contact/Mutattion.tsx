@@ -15,7 +15,7 @@ export const useSubmitContact = () => {
   return useMutation({
     mutationFn: async (data: ContactFormData) => {
       // Sends the contact form data to the backend contact endpoint
-      const response = await axiosAdmin.post("contact", data);
+      const response = await axiosAdmin.post("contact-us", data);
       return response.data;
     },
     onSuccess: () => {
