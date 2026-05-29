@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Character Image (Desktop) - Bottom Left with Fade In Animation */}
           <motion.div
-            className="hidden lg:block absolute lg:left-[-200px] left-[-170px] top-5 bottom-0 z-50"
+            className="hidden lg:block absolute lg:left-[-200px] left-[-170px] top-8 bottom-0 z-50"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
