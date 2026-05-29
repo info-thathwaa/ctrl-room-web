@@ -391,7 +391,6 @@ const Reports = () => {
           </motion.div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
