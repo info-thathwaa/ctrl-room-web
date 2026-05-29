@@ -77,7 +77,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 1.5, ease: "easeOut" }}
             >
               <Link href="/contact" className="cursor-pointer">
-                <button className="bg-white text-[#03353B] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl shadow-black/20 hover:bg-zinc-100 transition active:scale-95">
+                <button className="cursor-pointer bg-white text-[#03353B] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl shadow-black/20 hover:bg-zinc-100 transition active:scale-95">
                   Request a Live Demo →
                 </button>
               </Link>
