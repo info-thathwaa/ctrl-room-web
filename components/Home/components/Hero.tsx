@@ -1,6 +1,7 @@
 import Header from "@/components/common/Header";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const lines = [
@@ -75,9 +76,11 @@ const Hero = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.5, ease: "easeOut" }}
             >
-              <button className="bg-white text-[#03353B] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl shadow-black/20 hover:bg-zinc-100 transition active:scale-95">
-                Request a Live Demo →
-              </button>
+              <Link href="/contact">
+                <button className="bg-white text-[#03353B] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl shadow-black/20 hover:bg-zinc-100 transition active:scale-95">
+                  Request a Live Demo →
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>
