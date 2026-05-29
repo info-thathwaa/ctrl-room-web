@@ -97,7 +97,7 @@ const Header = ({
           </Link>
 
           <Link 
-            href="/#contact" 
+            href="/contact" 
             className={`${navText}`}
             onClick={(e) => handleLinkClick(e, "/#contact")}
           >
@@ -199,7 +199,7 @@ const Header = ({
               </Link>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className={`py-3 border-b border-white/10 ${
                   isTransparent ? "text-white" : "text-[#03353B]"
                 }`}
