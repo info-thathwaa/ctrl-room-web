@@ -98,7 +98,6 @@ const Testimonials = () => {
                       alt={review.name}
                       width={56}
                       height={56}
-                      quality={100}
                       className="object-cover w-full h-full"
                     />
                   </div>

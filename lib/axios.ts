@@ -1,24 +1,28 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosError, AxiosInstance } from "axios";
 import { toast } from "sonner";
+import type { InternalAxiosRequestConfig } from "axios";
 
+interface RetryAxiosRequestConfig extends InternalAxiosRequestConfig {
+  _retry?: boolean;
+}
 // build error update
-// export const AGENT_API = "http://localhost:3000/api/v1/";
-// export const AGENT_API = "https://ctrlroom.pythonanywhere.com/api/";
 export const AGENT_API = "https://ctrl-room-new-version.vercel.app/v1/api/";
 
 const axiosAdmin = axios.create({
   baseURL: AGENT_API,
 });
 
-
 // Shared state for token refresh
 let isRefreshing = false;
 let failedQueue: Array<{
-  resolve: (value?: any) => void;
-  reject: (reason?: any) => void;
+  resolve: (value?: string | null) => void;
+  reject: (reason?: AxiosError | Error | unknown) => void;
 }> = [];
 
-const processQueue = (error: any, token: string | null = null) => {
+const processQueue = (
+  error: AxiosError | Error | unknown,
+  token: string | null = null,
+) => {
   failedQueue.forEach((prom) => {
     if (error) {
       prom.reject(error);
@@ -72,7 +76,7 @@ const setupInterceptors = (instance: AxiosInstance) => {
 
       return config;
     },
-    (error: any) => Promise.reject(error),
+    (error: AxiosError) => Promise.reject(error),
   );
 
   instance.interceptors.response.use(
@@ -109,8 +113,8 @@ const setupInterceptors = (instance: AxiosInstance) => {
       }
       return response;
     },
-    async (error: any) => {
-      const originalRequest = error.config;
+    async (error: AxiosError) => {
+      const originalRequest = error.config as RetryAxiosRequestConfig;
 
       // If token expired or unauthorized
       if (error.response?.status === 401 && !originalRequest._retry) {

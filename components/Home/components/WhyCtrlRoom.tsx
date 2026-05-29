@@ -98,7 +98,6 @@ const WhyCtrlRoom = () => {
                       alt={feature.title}
                       width={35}
                       height={35}
-                      quality={100}
                       className="object-contain w-full h-full"
                     />
                   </div>
@@ -125,7 +124,6 @@ const WhyCtrlRoom = () => {
                 src="/whyctrl/main-illustration.webp"
                 alt="Ctrl-Room Illustration"
                 fill
-                quality={100}
                 className="object-cover"
                 priority
               />
@@ -147,7 +145,6 @@ const WhyCtrlRoom = () => {
                       alt={feature.title}
                       width={35}
                       height={35}
-                      quality={100}
                       className="object-contain w-full h-full"
                     />
                   </div>

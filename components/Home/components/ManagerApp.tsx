@@ -109,7 +109,6 @@ const ManagerApp = () => {
                     alt={feature.title}
                     width={32}
                     height={32}
-                    quality={100}
                     className="object-contain brightness-0 invert"
                   />
                 </div>
@@ -139,7 +138,6 @@ const ManagerApp = () => {
                   src="/managerapp/managerapp-screen.webp"
                   alt="Manager App Interface"
                   fill
-                  quality={100}
                   className="object-cover"
                   priority
                 />

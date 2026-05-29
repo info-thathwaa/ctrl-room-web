@@ -188,7 +188,6 @@ const Footer = () => {
                   alt="Download on App Store"
                   width={120}
                   height={40}
-                  quality={100}
                   className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
                 />
               </Link>
@@ -198,7 +197,6 @@ const Footer = () => {
                   alt="Get it on Google Play"
                   width={120}
                   height={40}
-                  quality={100}
                   className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
                 />
               </Link>
@@ -215,7 +213,6 @@ const Footer = () => {
               alt="Ctrl Room Logo"
               width={80}
               height={80}
-              quality={100}
               className="w-[60px] h-auto md:max-w-[80px] md:max-h-[80px]"
             />
           </div>

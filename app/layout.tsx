@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/common/Footer";
+import RQuery from "@/hooks/RQuery";
 
 export default function RootLayout({
   children,
@@ -24,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className={`${inter.variable} antialiased`}>
-        <TooltipProvider>
-          {children}
-          <Toaster />
-        </TooltipProvider>
-        <Footer />
+        <RQuery>
+          <TooltipProvider>
+            {children}
+            <Toaster />
+          </TooltipProvider>
+          <Footer />
+        </RQuery>
       </body>
     </html>
   );

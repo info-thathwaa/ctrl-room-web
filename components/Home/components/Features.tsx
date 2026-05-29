@@ -144,7 +144,6 @@ const Features = () => {
                   alt={tabs[activeTab].title}
                   height={1080}
                   width={1920}
-                  quality={100}
                   className="object-cover h-full w-full rounded-3xl pointer-events-none"
                   priority
                 />

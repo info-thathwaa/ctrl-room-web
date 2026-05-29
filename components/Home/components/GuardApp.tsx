@@ -103,7 +103,6 @@ const GuardApp = () => {
                   src="/guardapp/Guradapp-screen.webp"
                   alt="Guard App Interface"
                   fill
-                  quality={100}
                   className="object-cover"
                   priority
                 />
@@ -131,7 +130,6 @@ const GuardApp = () => {
                     alt={feature.title}
                     width={32}
                     height={32}
-                    quality={100}
                     className="object-contain brightness-0 invert"
                   />
                 </div>

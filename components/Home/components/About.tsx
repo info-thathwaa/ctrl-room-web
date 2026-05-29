@@ -101,7 +101,6 @@ const About = () => {
                   alt={feature.title}
                   width={70}
                   height={70}
-                  quality={100}
                   className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] object-contain"
                 />
               </div>

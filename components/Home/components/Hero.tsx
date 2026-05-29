@@ -32,7 +32,6 @@ const Hero = () => {
               alt="Hero Character"
               width={5000}
               height={5000}
-              quality={100}
               priority
               className="lg:h-[95vh] md:h-[85vh] w-auto object-contain object-bottom"
             />
