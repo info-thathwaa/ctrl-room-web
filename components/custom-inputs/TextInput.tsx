@@ -12,7 +12,7 @@ import { Eye, EyeOff } from "lucide-react";
 
 type TextInputProps = {
   name: string;
-  label?: string;
+  label?: React.ReactNode;
   placeholder?: string;
   className?: string;
   type?:
@@ -23,10 +23,10 @@ type TextInputProps = {
     | "textarea"
     | "time"
     | "date";
-  icon?: ReactNode;
+  icon?: React.ReactNode;
   rows?: number;
-  disabled?: boolean; // ← ADD THIS
-  readOnly?: boolean; // ← ADD THIS
+  disabled?: boolean;
+  readOnly?: boolean;
 };
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -44,12 +44,20 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     },
     ref,
   ) => {
-    const { control } = useFormContext();
+    const { control, getFieldState, formState } = useFormContext();
     const [showPassword, setShowPassword] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const isPassword = type === "password";
     const finalType = isPassword ? (showPassword ? "text" : "password") : type;
+
+    const { error } = getFieldState(name, formState);
+
+    useEffect(() => {
+      if (error && inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, [error]);
 
     const handleClick = () => {
       if ((type === "time" || type === "date") && inputRef.current) {
@@ -62,16 +70,9 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         control={control}
         name={name}
         render={({ field, fieldState }) => {
-          // Auto-focus on validation error
-          useEffect(() => {
-            if (fieldState.error && inputRef.current) {
-              inputRef.current.focus();
-            }
-          }, [fieldState.error]);
-
           return (
             <FormItem>
-              <FormLabel>{label}</FormLabel>
+              {label && <FormLabel>{label}</FormLabel>}
               <FormControl>
                 <div className="relative" onClick={handleClick}>
                   {type === "textarea" ? (

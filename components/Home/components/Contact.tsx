@@ -7,17 +7,9 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Form } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
+import { TextInput } from "@/components/custom-inputs/TextInput";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -93,105 +85,47 @@ const Contact = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name */}
-                  <FormField
-                    control={form.control}
+                  <TextInput
                     name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          Name <span className="text-red-500">*</span>
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Name"
-                            className="bg-zinc-50 border-none px-4 py-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    label={<>Name <span className="text-red-500">*</span></>}
+                    placeholder="Name"
+                    className="bg-zinc-50 border-none px-4 py-6"
                   />
 
                   {/* Phone Number */}
-                  <FormField
-                    control={form.control}
+                  <TextInput
                     name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          Phone Number <span className="text-red-500">*</span>
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Phone Number"
-                            className="bg-zinc-50 border-none px-4 py-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    label={<>Phone Number <span className="text-red-500">*</span></>}
+                    placeholder="Phone Number"
+                    className="bg-zinc-50 border-none px-4 py-6"
                   />
 
                   {/* Email */}
-                  <FormField
-                    control={form.control}
+                  <TextInput
                     name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Email"
-                            className="bg-zinc-50 border-none px-4 py-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    type="email"
+                    label="Email"
+                    placeholder="Email"
+                    className="bg-zinc-50 border-none px-4 py-6"
                   />
 
                   {/* Company Name */}
-                  <FormField
-                    control={form.control}
+                  <TextInput
                     name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Company Name</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Company Name"
-                            className="bg-zinc-50 border-none px-4 py-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    label="Company Name"
+                    placeholder="Company Name"
+                    className="bg-zinc-50 border-none px-4 py-6"
                   />
                 </div>
 
                 {/* Message */}
-                <FormField
-                  control={form.control}
+                <TextInput
                   name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        Message <span className="text-red-500">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Type here..."
-                          className="resize-none bg-zinc-50 border-none px-4 py-3 min-h-[150px]"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                  type="textarea"
+                  label={<>Message <span className="text-red-500">*</span></>}
+                  placeholder="Type here..."
+                  className="resize-none bg-zinc-50 border-none px-4 py-3 min-h-[150px]"
+                  rows={5}
                 />
 
                 {/* Submit Button */}

@@ -4,11 +4,40 @@ import Header from "@/components/common/Header";
 import { motion } from "framer-motion";
 import { Mail, Phone, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useForm, FormProvider, FieldValues } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { useState } from "react";
+import { toast } from "sonner";
 import { TextInput } from "@/components/custom-inputs/TextInput";
 
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  phone: z
+    .string()
+    .optional()
+    .or(z.literal(""))
+    .refine((val) => !val || val.length >= 10, {
+      message: "Phone number must be at least 10 characters.",
+    }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  company: z.string().optional().or(z.literal("")),
+  message: z.string().min(10, {
+    message: "Message must be at least 10 characters.",
+  }),
+});
+
+type ContactFormValues = z.infer<typeof formSchema>;
+
 const Contact = () => {
-  const methods = useForm({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const methods = useForm<ContactFormValues>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       phone: "",
@@ -18,8 +47,35 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (data: FieldValues) => {
-    console.log(data);
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message.");
+      }
+
+      toast.success("Thank you! Your message has been sent successfully.");
+      methods.reset();
+    } catch (error) {
+      console.error(error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Failed to send message. Please try again.";
+      toast.error(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -113,14 +169,14 @@ const Contact = () => {
                 </label>
                 <TextInput
                   name="phone"
-                  placeholder="Name"
+                  placeholder="Phone Number"
                   className="bg-[#F2F3F6] border-none px-6 py-4 rounded-xl h-14"
                 />
               </div>
 
               <div>
                 <label className="text-xs font-bold text-[#03353B] mb-2 block uppercase tracking-tight">
-                  Email
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <TextInput
                   name="email"
@@ -136,7 +192,7 @@ const Contact = () => {
                 </label>
                 <TextInput
                   name="company"
-                  placeholder="Name"
+                  placeholder="Company Name"
                   className="bg-[#F2F3F6] border-none px-6 py-4 rounded-xl h-14"
                 />
               </div>
@@ -157,9 +213,10 @@ const Contact = () => {
               <div className="md:col-span-2 flex justify-center mt-6">
                 <button
                   type="submit"
-                  className="bg-[#03353B] text-white px-12 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#022a2e] transition-all active:scale-95 group shadow-lg shadow-[#03353B]/20"
+                  disabled={isSubmitting}
+                  className="bg-[#03353B] text-white px-12 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#022a2e] transition-all active:scale-95 group shadow-lg shadow-[#03353B]/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {isSubmitting ? "Submitting..." : "Submit"}
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

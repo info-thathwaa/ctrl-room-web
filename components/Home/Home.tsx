@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Features from "./components/Features";
@@ -10,7 +9,7 @@ import ManagerApp from "./components/ManagerApp";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import { motion } from "framer-motion";
-
+import { useEffect } from "react";
 const Home = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.hash) {
