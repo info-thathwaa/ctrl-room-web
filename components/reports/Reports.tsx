@@ -158,7 +158,7 @@ const Reports = () => {
             <div className="w-full lg:w-1/2 flex justify-end">
               <div className="relative w-full aspect-[1.45] max-w-[540px]">
                 <Image
-                  src="/features/attendance.png"
+                  src="/reports/Check-out Logs.svg"
                   alt="Check-In / Check-Out Logs"
                   fill
                   className="object-contain object-right"
@@ -205,7 +205,7 @@ const Reports = () => {
             <div className="w-full lg:w-1/2 flex justify-end">
               <div className="relative w-full aspect-[1.45] max-w-[540px]">
                 <Image
-                  src="/features/site.png"
+                  src="/reports/Check-out Logs.svg"
                   alt="Site Point Logs"
                   fill
                   className="object-contain object-right"
@@ -240,7 +240,7 @@ const Reports = () => {
             <div className="w-full lg:w-1/2 flex justify-end">
               <div className="relative w-full aspect-[1.45] max-w-[540px]">
                 <Image
-                  src="/features/reports.png"
+                  src="/reports/Check-out Logs.svg"
                   alt="Daily Occurrence Report"
                   fill
                   className="object-contain object-right"
@@ -288,7 +288,7 @@ const Reports = () => {
             <div className="w-full lg:w-1/2 flex justify-end">
               <div className="relative w-full aspect-[1.45] max-w-[540px]">
                 <Image
-                  src="/features/Report.webp"
+                  src="/reports/Check-out Logs.svg"
                   alt="Shifts Reports"
                   fill
                   className="object-contain object-right"
@@ -335,7 +335,7 @@ const Reports = () => {
             <div className="w-full lg:w-1/2 flex justify-end">
               <div className="relative w-full aspect-[1.45] max-w-[540px]">
                 <Image
-                  src="/features/panic.png"
+                  src="/reports/Check-out Logs.svg"
                   alt="Staff License Renewal Report"
                   fill
                   className="object-contain object-right"
