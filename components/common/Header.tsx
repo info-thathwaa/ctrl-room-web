@@ -118,7 +118,7 @@ const Header = ({
             Contact Us
           </Link>
 
-          <Link href="https://ctrl-room-frontend-version2.vercel.app/">
+          <Link href="/login">
             <button
               className={`${
                 isLogoTransparent
@@ -219,8 +219,9 @@ const Header = ({
               </Link>
 
               <Link
-                href="https://ctrl-room-frontend-version2.vercel.app/"
+                href="/login"
                 className="mt-5"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 <button
                   className={`w-full ${
