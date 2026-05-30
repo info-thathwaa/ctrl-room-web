@@ -260,7 +260,7 @@ const Contact = () => {
           />
         </div>
         {/* UAE */}
-        <div className="absolute top-[52%] left-[55%] md:top-[55%] md:left-[56%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
+        <div className="absolute top-[52%] left-[55%] md:top-[54%] md:left-[56%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
           <Image
             src="https://flagcdn.com/w40/ae.png"
             alt="UAE Flag"
@@ -270,7 +270,7 @@ const Contact = () => {
           />
         </div>
         {/* India */}
-        <div className="absolute top-[58%] left-[62%] md:top-[60%] md:left-[63%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
+        <div className="absolute top-[51%] left-[66%] md:top-[52%] md:left-[64%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
           <Image
             src="https://flagcdn.com/w40/in.png"
             alt="India Flag"
