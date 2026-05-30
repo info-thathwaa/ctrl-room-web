@@ -179,9 +179,7 @@ const setupInterceptors = (instance: AxiosInstance) => {
         }
       }
 
-      return Promise.reject(
-        (error.response && error.response.data) || "Something went wrong",
-      );
+      return Promise.reject(error);
     },
   );
 };
