@@ -250,7 +250,7 @@ const Contact = () => {
         />
         {/* Indicators (Flags matching design markers) */}
         {/* UK */}
-        {/* <div className="absolute top-[35%] left-[45%] md:top-[38%] md:left-[47%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
+        <div className="absolute top-[35%] left-[45%] md:top-[38%] md:left-[47%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
           <Image
             src="https://flagcdn.com/w40/gb.png"
             alt="UK Flag"
@@ -258,9 +258,9 @@ const Contact = () => {
             height={16}
             className="rounded-[1px]"
           />
-        </div> */}
+        </div>
         {/* UAE */}
-        {/* <div className="absolute top-[52%] left-[55%] md:top-[55%] md:left-[56%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
+        <div className="absolute top-[52%] left-[55%] md:top-[55%] md:left-[56%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
           <Image
             src="https://flagcdn.com/w40/ae.png"
             alt="UAE Flag"
@@ -268,9 +268,9 @@ const Contact = () => {
             height={16}
             className="rounded-[1px]"
           />
-        </div> */}
+        </div>
         {/* India */}
-        {/* <div className="absolute top-[58%] left-[62%] md:top-[60%] md:left-[63%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
+        <div className="absolute top-[58%] left-[62%] md:top-[60%] md:left-[63%] transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-sm shadow-md z-30">
           <Image
             src="https://flagcdn.com/w40/in.png"
             alt="India Flag"
@@ -278,7 +278,7 @@ const Contact = () => {
             height={16}
             className="rounded-[1px]"
           />
-        </div> */}
+        </div>
       </section>
     </div>
   );
