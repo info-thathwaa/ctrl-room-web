@@ -11,6 +11,10 @@ export interface ContactFormData {
   message: string;
 }
 
+interface ApiErrorResponse {
+  message?: string | { title?: string; body?: string };
+}
+
 export const useSubmitContact = () => {
   return useMutation({
     mutationFn: async (data: ContactFormData) => {
@@ -22,11 +26,20 @@ export const useSubmitContact = () => {
       toast.success("Thank you! Your message has been sent successfully.");
     },
     onError: (error: Error) => {
-      const axiosError = error as AxiosError<{ message?: string }>;
-      const errorMessage =
-        axiosError?.response?.data?.message ||
-        error.message ||
-        "Failed to send message. Please try again.";
+      const axiosError = error as AxiosError<ApiErrorResponse>;
+      const responseData = axiosError?.response?.data;
+      const apiMessage = responseData?.message;
+
+      let errorMessage = "Failed to send message. Please try again.";
+
+      if (typeof apiMessage === "string") {
+        errorMessage = apiMessage;
+      } else if (apiMessage && typeof apiMessage === "object") {
+        errorMessage = apiMessage.body || apiMessage.title || JSON.stringify(apiMessage);
+      } else if (error?.message) {
+        errorMessage = error.message;
+      }
+
       toast.error(errorMessage);
     },
   });
