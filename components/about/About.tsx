@@ -127,7 +127,7 @@ const About = () => {
             </h2>
             <div className="flex flex-col gap-4 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
               <p>
-                Archer Shield Security Services is backed by Aegis Support Services, a prominent UK-based security provider founded in 2001. Building on decades of expertise, Archer Shield commenced Indian operations in 2026, with our Corporate Office located in Hyderabad. Today, we boast a global presence spanning the UK, UAE, and India.
+                Aegis Group of companies is backed by Aegis Support Services, a prominent UK-based security provider founded in 2001. Building on decades of expertise, Archer Shield commenced Indian operations in 2026, with our Corporate Office located in Hyderabad. Today, we boast a global presence spanning the UK, UAE, and India.
               </p>
               <p className="font-semibold text-black italic">
                 "We do not just provide manpower—we deliver discipline, reliable service, and peace of mind."
