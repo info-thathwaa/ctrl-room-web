@@ -181,7 +181,7 @@ const Footer = () => {
             </div>
 
             {/* App Store Buttons */}
-            <div className="flex flex-wrap gap-2 md:gap-3 mb-6">
+            <div className="flex  gap-2 md:gap-3 mb-6">
               <Link href="https://apps.apple.com" target="_blank">
                 <Image
                   src="/footer/appstore.png"
