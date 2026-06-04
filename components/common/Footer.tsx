@@ -216,7 +216,15 @@ const Footer = () => {
               className="w-[60px] h-auto md:max-w-[80px] md:max-h-[80px]"
             />
           </div>
-
+          <div>
+            <Image
+              src="/bedfordshire.jpeg"
+              alt="A member of the Bedfordshire chamber of commerce"
+              width={100}
+              height={100}
+              className="rounded-[1px] w-[100px] h-auto md:max-w-[100px] md:max-h-[100px]"
+            />
+          </div>
           {/* Copyright */}
           <div className="text-sm text-zinc-500">
             © 2026 Ctrl Room · All Rights Reserved.
