@@ -181,7 +181,7 @@ const Footer = () => {
             </div>
 
             {/* App Store Buttons */}
-            <div className="flex  gap-2 md:gap-3 mb-6">
+            <div className="flex gap-2 md:gap-3 mb-6">
               <Link href="https://apps.apple.com" target="_blank">
                 <Image
                   src="/footer/appstore.png"
@@ -207,7 +207,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
-          <div>
+          <div className="flex items-center gap-4">
             <Image
               src="/logo.png"
               alt="Ctrl Room Logo"
@@ -215,8 +215,17 @@ const Footer = () => {
               height={80}
               className="w-[60px] h-auto md:max-w-[80px] md:max-h-[80px]"
             />
+            <div className="border-l border-zinc-700 pl-4">
+              <Image
+                src="/bedfordshire.jpeg"
+                alt="Bedfordshire Chamber of Commerce"
+                width={200}
+                height={200}
+                className="w-full max-w-[200px] h-auto rounded-md"
+              />
+            </div>
           </div>
-          <div>
+          {/* <div>
             <Image
               src="/bedfordshire.jpeg"
               alt="A member of the Bedfordshire chamber of commerce"
@@ -224,7 +233,7 @@ const Footer = () => {
               height={100}
               className="rounded-[1px] w-[100px] h-auto md:max-w-[100px] md:max-h-[100px]"
             />
-          </div>
+          </div> */}
           {/* Copyright */}
           <div className="text-sm text-zinc-500">
             © 2026 Ctrl Room · All Rights Reserved.
