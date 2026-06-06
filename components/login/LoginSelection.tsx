@@ -96,7 +96,7 @@ const LoginSelection = () => {
                   <Settings className="w-8 h-8" />
                 </div>
                 <h2 className="text-2xl font-bold text-black mb-4 transition-colors group-hover:text-[#03353B]">
-                  Admin Dashboard
+                  Tenant Admin Dashboard
                 </h2>
                 <p className="text-base text-[#3C3C3C] leading-relaxed mb-8">
                   Manage tenant settings, configure system-wide rules, monitor guard schedules, oversee global patrol points, and generate administrative analytics.
