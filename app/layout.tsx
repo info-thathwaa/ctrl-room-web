@@ -16,6 +16,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/common/Footer";
 import RQuery from "@/hooks/RQuery";
+import VerificationGuard from "@/components/common/VerificationGuard";
 
 export default function RootLayout({
   children,
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden">
       <body className={`${inter.variable} antialiased`}>
         <RQuery>
+          <VerificationGuard />
           <TooltipProvider>
             {children}
             <Toaster />

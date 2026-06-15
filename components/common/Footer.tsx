@@ -3,8 +3,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/user-verify")) {
+    return null;
+  }
+
   return (
     <footer className="bg-[#0A0A0A] text-white">
       {/* Main Footer Content */}
