@@ -3,7 +3,7 @@
 import React from "react";
 import Header from "@/components/common/Header";
 import { motion } from "framer-motion";
-import { Shield, Settings, ArrowRight } from "lucide-react";
+import { Settings, ArrowRight, ShieldUser, UserCheck, Building } from "lucide-react";
 
 const LoginSelection = () => {
   // Animation variants
@@ -68,7 +68,7 @@ const LoginSelection = () => {
             >
               <div>
                 <div className="w-[60px] h-[60px] bg-[#03353B]/10 text-[#03353B] rounded-2xl flex items-center justify-center mb-8 transition-colors group-hover:bg-[#03353B] group-hover:text-white">
-                  <Shield className="w-8 h-8" />
+                  <Building className="w-8 h-8" />
                 </div>
                 <h2 className="text-2xl font-bold text-black mb-4 transition-colors group-hover:text-[#03353B]">
                   Client Dashboard
@@ -93,7 +93,7 @@ const LoginSelection = () => {
             >
               <div>
                 <div className="w-[60px] h-[60px] bg-[#03353B]/10 text-[#03353B] rounded-2xl flex items-center justify-center mb-8 transition-colors group-hover:bg-[#03353B] group-hover:text-white">
-                  <Settings className="w-8 h-8" />
+                  <ShieldUser className="w-8 h-8" />
                 </div>
                 <h2 className="text-2xl font-bold text-black mb-4 transition-colors group-hover:text-[#03353B]">
                   Tenant Admin Dashboard

@@ -141,7 +141,7 @@ const Contact = () => {
 
               <div>
                 <label className="text-xs font-bold text-[#03353B] mb-2 block uppercase tracking-tight">
-                  Phone Number <span className="text-red-400">^</span>
+                  Phone Number <span className="text-red-400">*</span>
                 </label>
                 <TextInput
                   name="phone"

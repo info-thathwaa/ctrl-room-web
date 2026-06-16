@@ -40,7 +40,7 @@ const Terms = () => {
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              At Ctrl Room, maintaining the privacy and security of your personal data is one of our key priorities. We understand the great responsibility that comes with looking after your data and we have implemented stringent privacy and security measures to ensure that your data is safely stored and securely managed. If you are curious to know more, please read through these helpful FAQ’s to stay informed about why your data is secure with Ctrl Room.
+              At Ctrl Room, maintaining the privacy and security of your personal data is one of our key priorities. We understand the great responsibility that comes with looking after your data and we have implemented stringent privacy and security measures to ensure that your data is safely stored and securely managed. If you are curious to know more, please read through these helpful FAQs to stay informed about why your data is secure with Ctrl Room.
             </p>
           </div>
         </motion.div>

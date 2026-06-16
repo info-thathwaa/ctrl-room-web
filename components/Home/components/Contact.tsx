@@ -100,7 +100,7 @@ const Contact = () => {
                    {/* Phone Number */}
                   <TextInput
                     name="phone"
-                    label="Phone Number"
+                    label={<>Phone Number <span className="text-red-500">*</span></>}
                     placeholder="Phone Number"
                     className="bg-zinc-50 border-none px-4 py-6"
                   />

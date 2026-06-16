@@ -15,14 +15,10 @@ interface UseVerifyTenantOptions {
 export const useVerifyTenant = (options?: UseVerifyTenantOptions) => {
   return useMutation({
     mutationFn: async (tenantId: string) => {
-      // Simulation delay for mock demonstration
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // Wire up backend API when ready:
-      // const response = await axiosAdmin.post(`tenants/verify/${tenantId}`);
-      // return response.data;
-      
-      return { success: true };
+      const response = await axiosAdmin.post("tenant/user-verification-approvel", {
+        tenant_id: tenantId,
+      });
+      return response.data;
     },
     onSuccess: () => {
       toast.success("User verified successfully!", {
