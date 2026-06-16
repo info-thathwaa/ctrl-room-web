@@ -17,21 +17,21 @@ const Testimonials = () => {
       role: "Administrator",
       avatar: "/testimonial/avatar1.png",
       review:
-        "The Ctrl Room Software Is Really User Friendly, And I Believe It Is Superior To The Current System. The Design Is Fantastic, And It Minimizes Paperwork, Which Is Beneficial To Both The Manager And The Employee. I Am Quite Delighted With The System.",
+        "The CTRL-Room Software Is Really User Friendly, And I Believe It Is Superior To The Current System. The Design Is Fantastic, And It Minimizes Paperwork, Which Is Beneficial To Both The Manager And The Employee. I Am Quite Delighted With The System.",
     },
     {
       name: "Sherly Thomas",
       role: "HR",
       avatar: "/testimonial/avatar2.png",
       review:
-        "I Am So Smitten With The Ctrl Room. Automated ID Creation Of Employee Was Perfect. The Payroll Part Was Really Appreciable. I Am Impressed",
+        "I Am So Smitten With The CTRL-Room. Automated ID Creation Of Employee Was Perfect. The Payroll Part Was Really Appreciable. I Am Impressed",
     },
     {
       name: "Sona Pouline",
       role: "Manager",
       avatar: "/testimonial/avatar3.png",
       review:
-        "Ctrl Room Is The Greatest Workforce Management System, With Many Features Such As Automated Employee And Manager ID Creation. There Are Three Levels Of Users: Admin, Manager, And Guard.",
+        "CTRL-Room Is The Greatest Workforce Management System, With Many Features Such As Automated Employee And Manager ID Creation. There Are Three Levels Of Users: Admin, Manager, And Guard.",
     },
   ];
 

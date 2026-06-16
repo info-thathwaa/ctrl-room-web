@@ -34,7 +34,7 @@ const GpsGeofencing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-lg md:text-[20px] font-medium leading-[1.8] text-justify md:text-left text-[#3C3C3C]">
-            Ctrl Room's GPS & Geofencing feature lets you take control of your field teams like never before. Whether you're managing security guards, maintenance staff, logistics teams, or on-site personnel—location-based intelligence helps you increase accountability, optimize efficiency, and enhance safety. With real-time GPS tracking and customizable geofences, you'll know who's where, when—and why.
+            CTRL-Room's GPS & Geofencing feature lets you take control of your field teams like never before. Whether you're managing security guards, maintenance staff, logistics teams, or on-site personnel-location based intelligence helps you increase accountability, optimize efficiency, and enhance safety. With real-time GPS tracking and customizable geofences, you'll know who's where, when-and why.
           </p>
         </motion.div>
 
@@ -168,7 +168,7 @@ const GpsGeofencing = () => {
             
             <div className="flex flex-col gap-4 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
               <p>
-                Staff using the Ctrl Room mobile app can securely share their live location during work hours.
+                Staff using the CTRL-Room mobile app can securely share their live location during work hours.
               </p>
             </div>
 
@@ -205,7 +205,7 @@ const GpsGeofencing = () => {
             Boost Efficiency With Smart Location Management
           </h2>
           <p className="text-[16px] md:text-[18px] font-normal text-[#3C3C3C] max-w-[800px]">
-            Get rid of paper logs, uncertainty, and lack of visibility. With Ctrl Room's GPS & Geofencing, you can simplify workforce supervision, enhance field efficiency, and ensure compliance—all from one dashboard.
+            Get rid of paper logs, uncertainty, and lack of visibility. With CTRL-Room's GPS & Geofencing, you can simplify workforce supervision, enhance field efficiency, and ensure compliance—all from one dashboard.
           </p>
           <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
             GET STARTED TODAY &gt;

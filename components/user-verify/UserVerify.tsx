@@ -134,7 +134,7 @@ export default function UserVerify() {
           {/* Logo is non-interactive image using dark/solid logo2.png for light background */}
           <Image
             src="/logo2.png"
-            alt="Ctrl Room Logo"
+            alt="CTRL-Room Logo"
             width={100}
             height={72}
             className="w-[50px] md:w-[80px]"

@@ -33,7 +33,7 @@ const Timesheet = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-lg md:text-[20px] font-medium leading-[1.8] text-justify md:text-left text-[#3C3C3C]">
-            Ctrl Room's Timesheet feature simplifies attendance and hour tracking for distributed, shift-based, or mobile teams. Whether your staff works onsite, in the field, or remotely—you'll always have a clear, real-time record of when they worked, where, and for how long. Track employee hours with precision, generate automated reports, and streamline payroll with confidence.
+            CTRL-Room's Timesheet feature simplifies attendance and hour tracking for distributed, shift-based, or mobile teams. Whether your staff works onsite, in the field, or remotely—you'll always have a clear, real-time record of when they worked, where, and for how long. Track employee hours with precision, generate automated reports, and streamline payroll with confidence.
           </p>
         </motion.div>
 
@@ -121,7 +121,7 @@ const Timesheet = () => {
             </h2>
             <div className="flex flex-col gap-4 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
               <p>
-                Seamless integration with Ctrl Room's Employee Scheduling lets the system auto-log hours for
+                Seamless integration with CTRL-Room's Employee Scheduling lets the system auto-log hours for
                 scheduled shifts and flag discrepancies (e.g., missed or early check-outs).
               </p>
             </div>
@@ -183,7 +183,7 @@ const Timesheet = () => {
             Save Time. Cut Errors. Improve Accuracy
           </h2>
           <p className="text-[16px] md:text-[18px] font-normal text-[#3C3C3C] max-w-[750px] leading-[1.6]">
-            The Ctrl Room Timesheet feature gives you the confidence that your teams are paid fairly, your reports are
+            The CTRL-Room Timesheet feature gives you the confidence that your teams are paid fairly, your reports are
             clean, and your time tracking is foolproof—no more manual logs, forgotten shifts, or time theft.
           </p>
           <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">

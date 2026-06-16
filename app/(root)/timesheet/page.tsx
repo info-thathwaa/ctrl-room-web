@@ -3,7 +3,7 @@ import React from "react";
 
 export const metadata = {
   title: "Timesheet | CTRL-Room",
-  description: "Ctrl Room's Timesheet feature simplifies attendance and hour tracking for distributed, shift-based, or mobile teams.",
+  description: "CTRL-Room's Timesheet feature simplifies attendance and hour tracking for distributed, shift-based, or mobile teams.",
 };
 
 const page = () => {

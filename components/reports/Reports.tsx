@@ -64,7 +64,7 @@ const Reports = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg md:text-[20px] font-medium leading-[1.8] text-justify md:text-left text-[#3C3C3C]">
-              Turn daily operations into actionable intelligence. Gain full visibility into your workforce, site activities, shift status, and daily operations—all from one place. Ctrl Room's comprehensive Reports Module transforms raw data into actionable insights, helping you manage your teams, enhance accountability, and make faster, smarter decisions.
+              Turn daily operations into actionable intelligence. Gain full visibility into your workforce, site activities, shift status, and daily operations—all from one place. CTRL-Room's comprehensive Reports Module transforms raw data into actionable insights, helping you manage your teams, enhance accountability, and make faster, smarter decisions.
             </p>
           </motion.div>
 
@@ -77,7 +77,7 @@ const Reports = () => {
             className="border border-[#E5E7EB] rounded-2xl bg-white p-8 md:p-10 shadow-sm flex flex-col gap-4"
           >
             <h2 className="text-xl md:text-[22px] font-bold text-[#03353B] leading-tight">
-              Why Use Ctrl Room Reports?
+              Why Use CTRL-Room Reports?
             </h2>
             <div className="flex flex-col gap-4 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
               <p className="font-medium text-[#0A0A0A]">
@@ -102,7 +102,7 @@ const Reports = () => {
                 Key Features
               </h2>
               <p className="text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
-                Here's what makes Ctrl Room's Reports feature an essential part of your workforce management strategy:
+                Here's what makes CTRL-Room's Reports feature an essential part of your workforce management strategy:
               </p>
             </div>
 
@@ -232,7 +232,7 @@ const Reports = () => {
                   Your daily snapshot of operations.
                 </p>
                 <p>
-                  A comprehensive report documenting daily events, incidents, and activities within the ctrl-room. In each site guard send daily occurrence of their site through phone.
+                  A comprehensive report documenting daily events, incidents, and activities within the CTRL-Room. In each site guard send daily occurrence of their site through phone.
                 </p>
               </div>
             </div>
@@ -357,7 +357,7 @@ const Reports = () => {
                 Mobile-Friendly Reporting
               </h2>
               <p className="text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
-                View, filter, and download reports right from your mobile device. Whether you're in the office or on-site, Ctrl Room ensures you're always connected to the data that matters.
+                View, filter, and download reports right from your mobile device. Whether you're in the office or on-site, CTRL-Room ensures you're always connected to the data that matters.
               </p>
             </div>
 
@@ -366,7 +366,7 @@ const Reports = () => {
                 Smarter Decisions Start Here
               </h2>
               <p className="text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
-                Ctrl Room's Reports feature gives you the operational insight you need to optimize performance, ensure compliance, and grow with confidence.
+                CTRL-Room's Reports feature gives you the operational insight you need to optimize performance, ensure compliance, and grow with confidence.
               </p>
             </div>
           </motion.div>
@@ -383,7 +383,7 @@ const Reports = () => {
               Transform Your Operational Data Into Actionable Insights
             </h2>
             <p className="text-[16px] md:text-[18px] font-normal text-[#3C3C3C] max-w-[650px]">
-              Get complete visibility into your security operations with Ctrl Room's comprehensive reporting tools.
+              Get complete visibility into your security operations with CTRL-Room's comprehensive reporting tools.
             </p>
             <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
               REQUEST A DEMO TODAY &gt;

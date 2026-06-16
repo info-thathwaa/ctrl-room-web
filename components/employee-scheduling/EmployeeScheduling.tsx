@@ -4,6 +4,7 @@ import React from "react";
 import Header from "@/components/common/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const EmployeeScheduling = () => {
   return (
@@ -179,10 +180,10 @@ const EmployeeScheduling = () => {
             Smarter Scheduling Starts Here
           </h2>
           <p className="text-[16px] md:text-[18px] font-normal text-[#3C3C3C] max-w-[800px]">
-            Eliminate guesswork, stop chasing last-minute replacements, and give your teams the clarity they need. With Ctrl Room's Employee Scheduling, you're in full control of your workforce planning.
+            Eliminate guesswork, stop chasing last-minute replacements, and give your teams the clarity they need. With CTRL-Room's Employee Scheduling, you're in full control of your workforce planning.
           </p>
           <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
-            GET STARTED TODAY &gt;
+            GET STARTED TODAY <ArrowRight />
           </button>
         </motion.div>
       </div>

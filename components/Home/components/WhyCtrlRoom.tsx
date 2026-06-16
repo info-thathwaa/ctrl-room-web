@@ -122,7 +122,7 @@ const WhyCtrlRoom = () => {
             <div className="relative w-full max-w-[400px] aspect-square bg-gradient-to-br from-[#03353B] to-[#024449] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/whyctrl/main-illustration.webp"
-                alt="Ctrl-Room Illustration"
+                alt="CTRL-Room Illustration"
                 fill
                 className="object-cover"
                 priority

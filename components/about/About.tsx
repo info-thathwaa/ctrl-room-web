@@ -86,12 +86,11 @@ const About = () => {
             <p className="text-base md:text-[18px] font-medium leading-[1.8] text-[#3C3C3C] text-justify md:text-left">
               Effective security goes beyond simply placing guards at entry
               points; it involves vigilance, proactive risk prevention, and
-              modern operational practices. Aegis Group of companies
-              combines professional manpower with intelligent technology,
-              allowing our clients to benefit from both experienced personnel
-              and real-time operational control. We deliver seamless,
-              transparent, and accountable security services powered by the CTRL
-              Room platform.
+              modern operational practices. Aegis Group of Companies combines
+              professional manpower with intelligent technology, allowing our
+              clients to benefit from both experienced personnel and real-time
+              operational control. We deliver seamless, transparent, and
+              accountable security services powered by the CTRL-Room platform.
             </p>
           </div>
           <div className="w-full md:w-1/3 flex justify-center">
@@ -327,10 +326,10 @@ const About = () => {
               Smart Technology
             </span>
             <h2 className="text-2xl md:text-[36px] font-bold text-[#0A0A0A] leading-tight">
-              The Technological Edge (CTRLRoom)
+              The Technological Edge (CTRL-Room)
             </h2>
             <p className="text-[16px] text-[#3C3C3C] leading-[1.6]">
-              We manage our highly trained personnel using CTRL Room, a unified
+              We manage our highly trained personnel using CTRL-Room, a unified
               platform designed for real-world field conditions. This ensures
               you have total transparency over your site's security.
             </p>

@@ -217,7 +217,7 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <Image
               src="/logo.png"
-              alt="Ctrl Room Logo"
+              alt="CTRL-Room Logo"
               width={80}
               height={80}
               className="w-[60px] h-auto md:max-w-[80px] md:max-h-[80px]"
@@ -243,7 +243,7 @@ const Footer = () => {
           </div> */}
           {/* Copyright */}
           <div className="text-sm text-zinc-500">
-            © 2026 Ctrl Room · All Rights Reserved.
+            © 2026 CTRL-Room · All Rights Reserved.
           </div>
 
           {/* Social Media Icons */}

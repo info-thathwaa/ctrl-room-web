@@ -61,7 +61,7 @@ const Header = ({
           <Link href="/">
             <Image
               src={`${isLogoTransparent ? "/logo.png" : "/logo2.png"}`}
-              alt="Ctrl Room Logo"
+              alt="CTRL-Room Logo"
               width={120}
               height={87}
               className="w-[60px] md:w-[97px]"

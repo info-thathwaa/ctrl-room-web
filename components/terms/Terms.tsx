@@ -40,7 +40,7 @@ const Terms = () => {
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              At Ctrl Room, maintaining the privacy and security of your personal data is one of our key priorities. We understand the great responsibility that comes with looking after your data and we have implemented stringent privacy and security measures to ensure that your data is safely stored and securely managed. If you are curious to know more, please read through these helpful FAQs to stay informed about why your data is secure with Ctrl Room.
+              At CTRL-Room, maintaining the privacy and security of your personal data is one of our key priorities. We understand the great responsibility that comes with looking after your data and we have implemented stringent privacy and security measures to ensure that your data is safely stored and securely managed. If you are curious to know more, please read through these helpful FAQs to stay informed about why your data is secure with CTRL-Room.
             </p>
           </div>
         </motion.div>
@@ -63,7 +63,7 @@ const Terms = () => {
               className="border border-[#E5E7EB] rounded-lg bg-white px-6 py-2 transition-all duration-200"
             >
               <AccordionTrigger className="text-base md:text-[18px] font-semibold text-[#0A0A0A] data-[state=open]:text-[#03353B] hover:no-underline py-4">
-                Are there laws that protect the privacy of Ctrl Room's customer data?
+                Are there laws that protect the privacy of CTRL-Room's customer data?
               </AccordionTrigger>
               <AccordionContent className="text-[16px] text-[#3C3C3C] font-normal leading-[1.8] pt-2 pb-6 text-justify md:text-left">
                 Yes! There are several of them and a detailed discussion of each regulation is beyond the scope of this article. Some of the big ones you may have heard of are the General Data Protection Regulation (GDPR) which applies to the European Union and European Economic Area; the California Consumer Privacy Act (CCPA) which applies to customers and users in California; and the Privacy Act of 1988 which applies to Australian customers and users. These laws have lots of similarities and some differences. For purposes of this FAQ, we will focus on the GDPR.
@@ -157,12 +157,12 @@ const Terms = () => {
           className="flex flex-col gap-6"
         >
           <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight text-[#0A0A0A]">
-            What Kind Of Personal Data Does Ctrl Room Collect?
+            What Kind Of Personal Data Does CTRL-Room Collect?
           </h2>
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              Ctrl Room collects several types of personal data in order to provide best in class workforce management software to our customers, including but not limited to:
+              CTRL-Room collects several types of personal data in order to provide best in class workforce management software to our customers, including but not limited to:
             </p>
           </div>
         </motion.div>
@@ -192,7 +192,7 @@ const Terms = () => {
               Employment information - This may include your employees' rosters, timesheets, pay information, positions or job functions, and other information about their employment
             </p>
             <p>
-              Sensitive information - This may include biometric information you or your employees' provide to Ctrl Room if your instance of the service has a "kiosk" (iPad) device and facial or voice recognition features enables
+              Sensitive information - This may include biometric information you or your employees' provide to CTRL-Room if your instance of the service has a "kiosk" (iPad) device and facial or voice recognition features enables
             </p>
           </div>
         </motion.div>
@@ -233,7 +233,7 @@ const Terms = () => {
           className="flex flex-col gap-6"
         >
           <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight text-[#0A0A0A]">
-            Who Can Delete An Employee's Ctrl Room Account?
+            Who Can Delete An Employee's CTRL-Room Account?
           </h2>
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
@@ -290,12 +290,12 @@ const Terms = () => {
           className="flex flex-col gap-6"
         >
           <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight text-[#0A0A0A]">
-            How Does Ctrl Room Keep My Personal Data Secure?
+            How Does CTRL-Room Keep My Personal Data Secure?
           </h2>
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              Ctrl Room uses industry leading technical and organizational measures to secure the physical and electronic information we store. For more information about Ctrl Room's security measures, visit our{" "}
+              CTRL-Room uses industry leading technical and organizational measures to secure the physical and electronic information we store. For more information about CTRL-Room's security measures, visit our{" "}
               <a href="#" className="hover:underline text-[#03353B] font-semibold">
                 Security page
               </a>
@@ -313,7 +313,7 @@ const Terms = () => {
           className="flex flex-col gap-6"
         >
           <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight text-[#0A0A0A]">
-            How Long Does Ctrl Room Retain My Personal Data?
+            How Long Does CTRL-Room Retain My Personal Data?
           </h2>
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
@@ -336,7 +336,7 @@ const Terms = () => {
           className="flex flex-col gap-6"
         >
           <h2 className="text-[28px] md:text-[40px] font-semibold leading-tight text-[#0A0A0A]">
-            Where Does Ctrl Room Process Or Transfer My Personal Data?
+            Where Does CTRL-Room Process Or Transfer My Personal Data?
           </h2>
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
@@ -363,19 +363,19 @@ const Terms = () => {
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              <strong>Software.</strong> Ctrl Room grants to the Clients, subject to the terms and conditions set forth, a non-exclusive, worldwide, non-transferable, license to use the Software in its operations.
+              <strong>Software.</strong> CTRL-Room grants to the Clients, subject to the terms and conditions set forth, a non-exclusive, worldwide, non-transferable, license to use the Software in its operations.
             </p>
             <p>
-              <strong>Non-Ownership.</strong> Except as expressly provided, nothing is construed to confer any ownership interest, license or other rights upon Client by implication, estoppel or otherwise as to any technology, intellectual property rights, products of Ctrl Room or any other entity.
+              <strong>Non-Ownership.</strong> Except as expressly provided, nothing is construed to confer any ownership interest, license or other rights upon Client by implication, estoppel or otherwise as to any technology, intellectual property rights, products of CTRL-Room or any other entity.
             </p>
             <p>
               <strong>Term.</strong> The grant of the License is for Initial License Term beginning from the Effective Date, and then automatically continuing on the same mutually aligned basis, unless either party elects against the continuance.
             </p>
             <p>
-              <strong>Termination.</strong> Both Parties (Ctrl Room or the Client) may terminate the service agreement, the communications by either party shall be sent by way of overnight mail or electronic mail (unless otherwise specified herein) at least thirty (30) days prior to the next billing date.
+              <strong>Termination.</strong> Both Parties (CTRL-Room or the Client) may terminate the service agreement, the communications by either party shall be sent by way of overnight mail or electronic mail (unless otherwise specified herein) at least thirty (30) days prior to the next billing date.
             </p>
             <p>
-              <strong>Training.</strong> Ctrl Room provides one (1) full-day training session to Client’s employees on the use of the Software, on a mutually-agreed-upon day and time between the Parties.
+              <strong>Training.</strong> CTRL-Room provides one (1) full-day training session to Client’s employees on the use of the Software, on a mutually-agreed-upon day and time between the Parties.
             </p>
             <p>
               <strong>Full Agreement.</strong> The written provisions of the Service Agreement shall constitute the full extent of the understanding between the Parties that supersedes and fully replaces any and all oral agreements or understandings which may presently or thereafter exist between the Parties.
@@ -417,7 +417,7 @@ const Terms = () => {
               <strong>Notice.</strong> All notices, requests or other communications to any party hereunder shall be sent by way of overnight mail or electronic mail (unless otherwise specified herein).
             </p>
             <p>
-              <strong>No Assignment.</strong> Neither Party will assign or transfer any rights or obligations under this Agreement without the prior written consent of the other Party, which consent shall not be unreasonably withheld. However, Client may assign this Agreement in the case of a merger, acquisition, consolidation or reorganization only with the prior written authorization of Ctrl Room.
+              <strong>No Assignment.</strong> Neither Party will assign or transfer any rights or obligations under this Agreement without the prior written consent of the other Party, which consent shall not be unreasonably withheld. However, Client may assign this Agreement in the case of a merger, acquisition, consolidation or reorganization only with the prior written authorization of CTRL-Room.
             </p>
           </div>
         </motion.div>
@@ -436,13 +436,13 @@ const Terms = () => {
           
           <div className="flex flex-col gap-6 text-[16px] font-normal text-[#3C3C3C] leading-[1.8] text-justify md:text-left">
             <p>
-              <strong>No Liability.</strong> Ctrl Room is not liable with respect to any subject matter under any contract, negligence, strict liability or other legal or equitable theory for (a) any indirect, incidental, consequential or punitive damages or lost profits or (b) cost of procurement of substitute goods, technology or services.
+              <strong>No Liability.</strong> CTRL-Room is not liable with respect to any subject matter under any contract, negligence, strict liability or other legal or equitable theory for (a) any indirect, incidental, consequential or punitive damages or lost profits or (b) cost of procurement of substitute goods, technology or services.
             </p>
             <p>
-              <strong>Indemnification.</strong> Client shall indemnify, defend and hold harmless Ctrl Room and its current and former directors, governing board members, trustees, officers, faculty, medical and professional staff, employees, students and agents and their respective successors, heirs and assigns (the “Indemnitees”) from and against any claim, liability, cost, expense, damage, deficiency, loss or obligation of any kind or nature (including reasonable attorneys’ fees and other costs and expenses of litigation) based upon, arising out of or otherwise relating to this Agreement, including any cause of action relating to product liability concerning any product, process or service made, used, sold or performed pursuant to any right or license granted under this Agreement (collectively “Claims”). Neither Client nor Ctrl Room shall settle any Claim without the prior written consent of the other, which consent shall not be unreasonably withheld.
+              <strong>Indemnification.</strong> Client shall indemnify, defend and hold harmless CTRL-Room and its current and former directors, governing board members, trustees, officers, faculty, medical and professional staff, employees, students and agents and their respective successors, heirs and assigns (the “Indemnitees”) from and against any claim, liability, cost, expense, damage, deficiency, loss or obligation of any kind or nature (including reasonable attorneys’ fees and other costs and expenses of litigation) based upon, arising out of or otherwise relating to this Agreement, including any cause of action relating to product liability concerning any product, process or service made, used, sold or performed pursuant to any right or license granted under this Agreement (collectively “Claims”). Neither Client nor CTRL-Room shall settle any Claim without the prior written consent of the other, which consent shall not be unreasonably withheld.
             </p>
             <p>
-              <strong>Attorney Fees.</strong> Client shall, at its own expense, provide attorneys reasonably acceptable to Ctrl Room to defend against any actions brought or filed against any Indemnitee hereunder with respect to the subject of indemnity contained herein, whether or not such actions are rightfully brought.
+              <strong>Attorney Fees.</strong> Client shall, at its own expense, provide attorneys reasonably acceptable to CTRL-Room to defend against any actions brought or filed against any Indemnitee hereunder with respect to the subject of indemnity contained herein, whether or not such actions are rightfully brought.
             </p>
             <p>
               <strong>Confidential Information.</strong> "Confidential Information" is information provided by one party (“Discloser”) to the other party (“Recipient”) that is either (a) disclosed orally, visually or in writing and is clearly marked or identified as proprietary or confidential at the time of disclosure; (b) disclosed under conditions or is of such a nature that would reasonably be deemed confidential or proprietary by the Discloser; or (c) acquired while accessing a Party’s site or facility. Confidential Information includes, without limitation, all information relating to existing and potential customers, suppliers, markets, contracts, prices, products, personnel, strategies, policies, systems, procedures, technologies, know-how, data, processes, inventions, research, developments, formulations, applications, methods of manufacture and any other proprietary information of either Party or any of its affiliates.
