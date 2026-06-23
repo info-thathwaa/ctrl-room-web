@@ -7,6 +7,7 @@ interface RetryAxiosRequestConfig extends InternalAxiosRequestConfig {
 }
 // build error update
 export const AGENT_API = "https://ctrl-room-new-version.vercel.app/v1/api/";
+export const AGENT_API = "https://ctrl-room.com/v1/api/";
 
 const axiosAdmin = axios.create({
   baseURL: AGENT_API,
