@@ -15,7 +15,7 @@ interface UseVerifyTenantOptions {
 export const useVerifyTenant = (options?: UseVerifyTenantOptions) => {
   return useMutation({
     mutationFn: async (tenantId: string) => {
-      const response = await axiosAdmin.post("tenant/user-verification-approvel", {
+      const response = await axiosAdmin.post("ctrlroom/user-verification-approvel", {
         tenant_id: tenantId,
       });
       return response.data;
