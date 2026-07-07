@@ -13,8 +13,8 @@ export default function VerificationGuard() {
     // Check if there is an active verification lock in session storage
     const lockId = sessionStorage.getItem("verification_lock");
     
-    // If locked and not currently on the verify page, force redirect back
-    if (lockId && !pathname.startsWith("/user-verify")) {
+    // If locked and not currently on the verify page, force redirect back (ignore reset-password path)
+    if (lockId && !pathname.startsWith("/user-verify") && !pathname.startsWith("/reset-password")) {
       router.replace(`/user-verify/${lockId}`);
     }
   }, [pathname, router]);
