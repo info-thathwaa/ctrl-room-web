@@ -188,25 +188,54 @@ const Footer = () => {
             </div>
 
             {/* App Store Buttons */}
-            <div className="flex gap-2 md:gap-3 mb-6">
-              <Link href="https://apps.apple.com" target="_blank">
-                <Image
-                  src="/footer/appstore.png"
-                  alt="Download on App Store"
-                  width={120}
-                  height={40}
-                  className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
-                />
-              </Link>
-              <Link href="https://play.google.com" target="_blank">
-                <Image
-                  src="/footer/playstore.png"
-                  alt="Get it on Google Play"
-                  width={120}
-                  height={40}
-                  className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
-                />
-              </Link>
+            <div className="space-y-4 mb-6">
+              <div>
+                <p className="text-xs text-zinc-400 mb-1.5 font-medium">Manager App</p>
+                <div className="flex gap-2 md:gap-3">
+                  <Link href="https://apps.apple.com/us/app/ctrl-room/id6544798168" target="_blank">
+                    <Image
+                      src="/footer/appstore.png"
+                      alt="Download CTRL-Room on App Store"
+                      width={120}
+                      height={40}
+                      className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
+                    />
+                  </Link>
+                  <Link href="https://play.google.com/store/apps/details?id=com.aegis.ctrl_room" target="_blank">
+                    <Image
+                      src="/footer/playstore.png"
+                      alt="Get CTRL-Room on Google Play"
+                      width={120}
+                      height={40}
+                      className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
+                    />
+                  </Link>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xs text-zinc-400 mb-1.5 font-medium">Guard App</p>
+                <div className="flex gap-2 md:gap-3">
+                  <Link href="https://apps.apple.com/us/app/guards-control-room/id6476892063" target="_blank">
+                    <Image
+                      src="/footer/appstore.png"
+                      alt="Download Guards Control Room on App Store"
+                      width={120}
+                      height={40}
+                      className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
+                    />
+                  </Link>
+                  <Link href="https://play.google.com/store/apps/details?id=com.thathwaa.controlroom&pli=1" target="_blank">
+                    <Image
+                      src="/footer/playstore.png"
+                      alt="Get Guards Control Room on Google Play"
+                      width={120}
+                      height={40}
+                      className="h-8 md:h-10 w-auto bg-white rounded-[8px]"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
