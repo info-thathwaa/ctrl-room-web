@@ -3,6 +3,7 @@
 import React from "react";
 import Header from "@/components/common/Header";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Timesheet = () => {
   return (
@@ -186,9 +187,11 @@ const Timesheet = () => {
             The CTRL-Room Timesheet feature gives you the confidence that your teams are paid fairly, your reports are
             clean, and your time tracking is foolproof—no more manual logs, forgotten shifts, or time theft.
           </p>
-          <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
-            GET STARTED TODAY &gt;
-          </button>
+          <Link href={"/contact"}>
+            <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
+              GET STARTED TODAY &gt;
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>
