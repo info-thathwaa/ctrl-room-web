@@ -523,7 +523,7 @@ const About = () => {
                   GET IN TOUCH
                 </button>
               </Link>
-              <Link href="/demo" className="w-full">
+              <Link href="/contact" className="w-full">
                 <button className="w-full bg-white border-2 border-[#03353B] text-[#03353B] font-bold text-sm px-6 py-4 rounded-xl hover:bg-[#F2F3F6] transition active:scale-95 text-center">
                   REQUEST A DEMO
                 </button>
