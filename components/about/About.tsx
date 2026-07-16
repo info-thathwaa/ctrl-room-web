@@ -457,12 +457,10 @@ const About = () => {
               Let's Secure Your Future
             </h3>
             <p className="text-base text-[#3C3C3C] leading-[1.7]">
-              As a proud product of the Aegis Group of Companies, our globally
-              launched platform is currently trusted across India, the UK, and
-              the UAE. We look forward to supporting your operations with
-              seamless, high-discipline security and facility management
-              solutions. Contact our local teams or our global Aegis partners
-              today to get started.
+              Developed by the Aegis Group of Companies and used globally across
+              India, the UK, and the UAE, we provide seamless, high-discipline
+              security and facility management solutions. Reach out to our
+              regional offices or global partners to secure your operations.
             </p>
             <div className="flex flex-col gap-4 mt-2">
               <div className="flex items-start gap-4">
