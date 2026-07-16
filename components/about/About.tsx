@@ -462,7 +462,7 @@ const About = () => {
               Contact our teams in India or Aegis partners globally.
             </p>
             <div className="flex flex-col gap-4 mt-2">
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-[#03353B] shrink-0 mt-1" />
                 <div className="text-[#3C3C3C] text-sm leading-[1.6]">
                   <span className="font-semibold block text-black">
@@ -471,7 +471,7 @@ const About = () => {
                   2nd Floor, Plot No. B-1, Vikrampuri Colony, Hyderabad,
                   Telangana-500009
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-[#03353B] shrink-0" />
                 <div className="text-[#3C3C3C] text-sm">
@@ -481,7 +481,7 @@ const About = () => {
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-[#03353B] shrink-0" />
                 <div className="text-[#3C3C3C] text-sm">
-                  office@archershieldsecurity.com
+                  admin@control-room.com
                 </div>
               </div>
               <div className="flex items-center gap-4">

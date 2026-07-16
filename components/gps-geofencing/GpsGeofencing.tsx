@@ -4,6 +4,7 @@ import React from "react";
 import Header from "@/components/common/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const GpsGeofencing = () => {
   return (
@@ -207,9 +208,11 @@ const GpsGeofencing = () => {
           <p className="text-[16px] md:text-[18px] font-normal text-[#3C3C3C] max-w-[800px]">
             Get rid of paper logs, uncertainty, and lack of visibility. With CTRL-Room's GPS & Geofencing, you can simplify workforce supervision, enhance field efficiency, and ensure compliance—all from one dashboard.
           </p>
-          <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
-            GET STARTED TODAY &gt;
-          </button>
+          <Link href="/contact">
+            <button className="bg-[#03353B] text-white font-bold text-sm md:text-[15px] px-8 py-4 rounded-full tracking-wider hover:bg-[#022a2e] transition active:scale-95 flex items-center gap-2">
+              GET STARTED TODAY &gt;
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>
