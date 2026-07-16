@@ -457,21 +457,23 @@ const About = () => {
               Let's Secure Your Future
             </h3>
             <p className="text-base text-[#3C3C3C] leading-[1.7]">
-              We look forward to supporting your operations with seamless,
-              high-discipline security and facility management solutions.
-              Contact our teams in India or Aegis partners globally.
+              As a proud product of the Aegis Group of Companies, our globally
+              launched platform is currently trusted across India, the UK, and
+              the UAE. We look forward to supporting your operations with
+              seamless, high-discipline security and facility management
+              solutions. Contact our local teams or our global Aegis partners
+              today to get started.
             </p>
             <div className="flex flex-col gap-4 mt-2">
-              {/* <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-[#03353B] shrink-0 mt-1" />
                 <div className="text-[#3C3C3C] text-sm leading-[1.6]">
                   <span className="font-semibold block text-black">
-                    Corporate Office (India):
+                    Address:
                   </span>
-                  2nd Floor, Plot No. B-1, Vikrampuri Colony, Hyderabad,
-                  Telangana-500009
+                  363A Dunstable Rd, Maidenhall, Luton LU4 8BY, United Kingdom
                 </div>
-              </div> */}
+              </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-[#03353B] shrink-0" />
                 <div className="text-[#3C3C3C] text-sm">
@@ -487,14 +489,14 @@ const About = () => {
               <div className="flex items-center gap-4">
                 <Globe className="w-5 h-5 text-[#03353B] shrink-0" />
                 <div className="text-sm flex gap-3 text-[#03353B] font-medium">
-                  <a
+                  {/* <a
                     href="https://www.archershieldsecurity.com"
                     target="_blank"
                     className="hover:underline"
                   >
                     archershieldsecurity.com
                   </a>
-                  <span>|</span>
+                  <span>|</span> */}
                   <a
                     href="https://www.aegisgroupofcompanies.com"
                     target="_blank"
