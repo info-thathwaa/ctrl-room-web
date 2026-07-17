@@ -457,10 +457,12 @@ const About = () => {
               Let's Secure Your Future
             </h3>
             <p className="text-base text-[#3C3C3C] leading-[1.7]">
-              Developed by the Aegis Group of Companies and used globally across
-              India, the UK, and the UAE, we provide seamless, high-discipline
-              security and facility management solutions. Reach out to our
-              regional offices or global partners to secure your operations.
+              Ctrl Room is a advanced security workforce management platform
+              developed by the Aegis Group of Companies. Designed for global
+              operations, it is currently deployed and actively used across the
+              United Kingdom, UAE, and India, helping organizations streamline
+              security operations with a secure, scalable, and intelligent
+              solution.
             </p>
             <div className="flex flex-col gap-4 mt-2">
               <div className="flex items-start gap-4">
