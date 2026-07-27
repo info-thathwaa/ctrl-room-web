@@ -60,7 +60,7 @@ const LoginSelection = () => {
           >
             {/* Client Login Card */}
             <motion.a
-              href="https://ctrl-room-client-dashboard-frontend.vercel.app/"
+              href="https://client.ctrl-room.com/"
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeIn}
@@ -85,7 +85,7 @@ const LoginSelection = () => {
 
             {/* Admin Login Card */}
             <motion.a
-              href="https://ctrl-room-tenant-dashboard.vercel.app/"
+              href="https://tenant.ctrl-room.com/"
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeIn}
