@@ -15,7 +15,7 @@ interface UseSubmitAnonymousReportOptions {
 export const useSubmitAnonymousReport = (options?: UseSubmitAnonymousReportOptions) => {
   return useMutation({
     mutationFn: async (payload: FormData) => {
-      const response = await axiosAdmin.post("/v1/api/anonymous-reports", payload, {
+      const response = await axiosAdmin.post("/anonymous-reports", payload, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       return response.data;
