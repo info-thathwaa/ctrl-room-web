@@ -101,7 +101,10 @@ export default function AnonymousReportForm() {
 
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    form.setValue("category", categoryId === "Other" ? "" : categoryId, { shouldValidate: true });
+    form.setValue("category", categoryId === "Other" ? "" : categoryId);
+    if (categoryId !== "Other") {
+      form.trigger("category");
+    }
     setStep(2);
   };
 
@@ -505,7 +508,7 @@ ${values.description}
               <Button
                 type="submit"
                 disabled={submitMutation.isPending || !isAnonymousConfirmed}
-                className="w-full bg-[#033F40] hover:bg-[#033F40]/90 text-white py-6 text-base font-semibold disabled:opacity-50"
+                className="w-full cursor-pointer bg-[#033F40] hover:bg-[#033F40]/90 text-white py-6 text-base font-semibold disabled:opacity-50"
               >
                 {submitMutation.isPending ? "Submitting..." : "Submit Report"}
               </Button>
