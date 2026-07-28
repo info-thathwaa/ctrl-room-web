@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { ChevronLeft, Lock, UploadCloud } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -188,7 +189,7 @@ ${values.description}
           )}
           <h1 className="text-lg font-semibold text-slate-800">Report a Concern</h1>
         </div>
-        <img src="/logo2.png" alt="Ctrl Room" className="h-8 object-contain" />
+        <Image src="/logo2.png" alt="Ctrl Room" width={120} height={32} className="h-8 w-auto object-contain" />
       </div>
 
       {step === 1 && (
@@ -346,19 +347,9 @@ ${values.description}
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Location (Campus / Area)</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select location" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="North Campus">North Campus</SelectItem>
-                          <SelectItem value="South Campus">South Campus</SelectItem>
-                          <SelectItem value="Main Building">Main Building</SelectItem>
-                          <SelectItem value="Other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormControl>
+                        <Input placeholder="e.g. Main Campus" {...field} />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -370,18 +361,9 @@ ${values.description}
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Building (Optional)</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select building" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="Building A">Building A</SelectItem>
-                          <SelectItem value="Building B">Building B</SelectItem>
-                          <SelectItem value="Building C">Building C</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormControl>
+                        <Input placeholder="e.g. Building A" {...field} />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
