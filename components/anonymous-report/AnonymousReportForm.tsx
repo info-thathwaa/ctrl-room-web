@@ -173,19 +173,22 @@ ${values.description}
   return (
     <Card className="w-full max-w-2xl mx-auto bg-white overflow-hidden shadow-sm border">
       {/* Header */}
-      <div className="px-6 py-4 border-b flex items-center gap-3">
-        {step === 2 ? (
-          <button
-            onClick={() => setStep(1)}
-            type="button"
-            className="p-1 hover:bg-slate-100 rounded-md transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5 text-slate-600" />
-          </button>
-        ) : (
-          <ChevronLeft className="w-5 h-5 text-slate-400 invisible" />
-        )}
-        <h1 className="text-lg font-semibold text-slate-800">Report a Concern</h1>
+      <div className="px-6 py-4 border-b flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          {step === 2 ? (
+            <button
+              onClick={() => setStep(1)}
+              type="button"
+              className="p-1 hover:bg-slate-100 rounded-md transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5 text-slate-600" />
+            </button>
+          ) : (
+            <ChevronLeft className="w-5 h-5 text-slate-400 invisible" />
+          )}
+          <h1 className="text-lg font-semibold text-slate-800">Report a Concern</h1>
+        </div>
+        <img src="/logo2.png" alt="Ctrl Room" className="h-8 object-contain" />
       </div>
 
       {step === 1 && (
