@@ -74,6 +74,7 @@ export default function AnonymousReportForm() {
   const report_type = searchParams.get("report_type") || "event";
 
   const [step, setStep] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [file, setFile] = useState<File | null>(null);
 
   const submitMutation = useSubmitAnonymousReport({
@@ -99,7 +100,8 @@ export default function AnonymousReportForm() {
   const isAnonymousConfirmed = form.watch("isAnonymousConfirmed");
 
   const handleCategorySelect = (categoryId: string) => {
-    form.setValue("category", categoryId, { shouldValidate: true });
+    setSelectedCategory(categoryId);
+    form.setValue("category", categoryId === "Other" ? "" : categoryId, { shouldValidate: true });
     setStep(2);
   };
 
@@ -114,10 +116,13 @@ export default function AnonymousReportForm() {
     payload.append("report_type", report_type);
     payload.append("id", id);
     payload.append("subject", values.category);
-    
+
     payload.append("againsted_by", values.againsted_by || "");
     payload.append("complainant", values.complainant || "");
-    payload.append("complainant_contact_number", values.complainant_contact_number || "");
+    payload.append(
+      "complainant_contact_number",
+      values.complainant_contact_number || "",
+    );
 
     const extendedDescription = `
 Location: ${values.location || "N/A"}
@@ -127,7 +132,7 @@ Date & Time: ${values.datetime || "N/A"}
 
 ${values.description}
     `.trim();
-    
+
     payload.append("description", extendedDescription);
 
     if (file) {
@@ -154,7 +159,12 @@ ${values.description}
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 20 }}
+              transition={{
+                delay: 0.2,
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
             >
               <Check className="w-10 h-10 text-emerald-600 stroke-[3]" />
             </motion.div>
@@ -164,7 +174,11 @@ ${values.description}
         <p className="text-muted-foreground">
           Thank you. Your report has been submitted anonymously.
         </p>
-        <Button onClick={() => window.location.reload()} variant="outline" className="mt-4">
+        <Button
+          onClick={() => window.location.reload()}
+          variant="outline"
+          className="mt-4"
+        >
           Submit Another Report
         </Button>
       </Card>
@@ -174,22 +188,30 @@ ${values.description}
   return (
     <Card className="w-full max-w-2xl mx-auto bg-white overflow-hidden shadow-sm border">
       {/* Header */}
-      <div className="px-6 py-4 border-b flex items-center justify-between">
+      <div className="px-6 py-4 border-b flex flex-col items-center justify-between">
+        <Image
+          src="/logo2.png"
+          alt="Ctrl Room"
+          width={120}
+          height={32}
+          className="h-11 w-full object-contain -mt-5 mb-2"
+        />
         <div className="flex items-center gap-3">
           {step === 2 ? (
             <button
               onClick={() => setStep(1)}
               type="button"
-              className="p-1 hover:bg-slate-100 rounded-md transition-colors"
+              className="p-1 cursor-pointer hover:bg-slate-100 rounded-md transition-colors"
             >
               <ChevronLeft className="w-5 h-5 text-slate-600" />
             </button>
           ) : (
             <ChevronLeft className="w-5 h-5 text-slate-400 invisible" />
           )}
-          <h1 className="text-lg font-semibold text-slate-800">Report a Concern</h1>
+          <h1 className="text-lg font-semibold text-slate-800">
+            Report a Concern
+          </h1>
         </div>
-        <Image src="/logo2.png" alt="Ctrl Room" width={120} height={32} className="h-8 w-auto object-contain" />
       </div>
 
       {step === 1 && (
@@ -211,7 +233,7 @@ ${values.description}
                   key={category.id}
                   type="button"
                   onClick={() => handleCategorySelect(category.id)}
-                  className="flex items-center gap-4 p-4 border rounded-xl hover:border-emerald-600 hover:shadow-sm transition-all bg-white text-left group"
+                  className="flex cursor-pointer items-center gap-4 p-4 border rounded-xl hover:border-emerald-600 hover:shadow-sm transition-all bg-white text-left group"
                 >
                   <div className="text-slate-800 group-hover:text-emerald-700 transition-colors">
                     <Icon className="w-6 h-6" />
@@ -236,9 +258,14 @@ ${values.description}
 
       {step === 2 && (
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 flex flex-col gap-6">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="p-6 flex flex-col gap-6"
+          >
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Tell us more</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                Tell us more
+              </h2>
               <p className="text-slate-500">
                 Please provide details about the concern.
               </p>
@@ -251,20 +278,30 @@ ${values.description}
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Category</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    {selectedCategory === "Other" ? (
                       <FormControl>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select category" />
-                        </SelectTrigger>
+                        <Input placeholder="Enter category" {...field} />
                       </FormControl>
-                      <SelectContent>
-                        {CATEGORIES.map((cat) => (
-                          <SelectItem key={cat.id} value={cat.id}>
-                            {cat.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    ) : (
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        disabled
+                      >
+                        <FormControl>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select category" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {CATEGORIES.map((cat) => (
+                            <SelectItem key={cat.id} value={cat.id}>
+                              {cat.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
                     <FormMessage />
                   </FormItem>
                 )}
@@ -294,7 +331,10 @@ ${values.description}
                     <FormItem>
                       <FormLabel>Your Name (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Leave blank to remain anonymous" {...field} />
+                        <Input
+                          placeholder="Leave blank to remain anonymous"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -308,7 +348,10 @@ ${values.description}
                     <FormItem>
                       <FormLabel>Contact Number (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Leave blank to remain anonymous" {...field} />
+                        <Input
+                          placeholder="Leave blank to remain anonymous"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -378,7 +421,10 @@ ${values.description}
                     <FormItem>
                       <FormLabel>Floor / Room (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g. Floor 2 / Room 201" {...field} />
+                        <Input
+                          placeholder="e.g. Floor 2 / Room 201"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -413,11 +459,16 @@ ${values.description}
                     <UploadCloud className="w-6 h-6" />
                   </div>
                   {file ? (
-                    <p className="text-sm font-medium text-slate-800">{file.name}</p>
+                    <p className="text-sm font-medium text-slate-800">
+                      {file.name}
+                    </p>
                   ) : (
                     <>
                       <p className="text-sm text-slate-600 mb-1">
-                        <span className="font-semibold text-emerald-700">Click to upload</span> or drag and drop
+                        <span className="font-semibold text-emerald-700">
+                          Click to upload
+                        </span>{" "}
+                        or drag and drop
                       </p>
                       <p className="text-xs text-slate-400">
                         PNG, JPG, PDF up to 5MB
@@ -440,7 +491,8 @@ ${values.description}
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel className="text-sm font-medium leading-relaxed text-slate-700 cursor-pointer">
-                        I understand my report is anonymous and cannot be traced back to me.
+                        I understand my report is anonymous and cannot be traced
+                        back to me.
                       </FormLabel>
                       <FormMessage />
                     </div>
