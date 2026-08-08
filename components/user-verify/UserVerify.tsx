@@ -174,14 +174,6 @@ export default function UserVerify() {
                 Click verify button to confirm the tenant created for your mail
               </p>
 
-              {/* Path ID Info */}
-              {id && (
-                <div className="bg-[#F2F3F6] border border-gray-200/80 rounded-xl py-2 px-4 inline-flex items-center gap-2 mb-8 select-all">
-                  <span className="text-xs text-[#03353B] font-mono font-bold">Tenant ID:</span>
-                  <span className="text-xs font-mono text-zinc-600">{id}</span>
-                </div>
-              )}
-
               {/* Verify Button matching the other site buttons */}
               <button
                 onClick={() => setDialogOpen(true)}
