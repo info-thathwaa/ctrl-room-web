@@ -180,9 +180,9 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#03353B]"
+                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                 />
-                <button className="bg-[#03353B] text-white px-4 py-2 rounded-lg hover:bg-[#024449] transition">
+                <button className="bg-brand-azure text-white px-4 py-2 rounded-lg hover:bg-brand-orange transition cursor-pointer font-bold">
                   →
                 </button>
               </div>
@@ -255,15 +255,6 @@ const Footer = () => {
               height={80}
               className="w-[60px] h-auto md:max-w-[80px] md:max-h-[80px]"
             />
-            <div className="border-l border-zinc-700 pl-4">
-              <Image
-                src="/bedfordshire.jpeg"
-                alt="Bedfordshire Chamber of Commerce"
-                width={200}
-                height={200}
-                className="w-full max-w-[200px] h-auto rounded-md"
-              />
-            </div>
           </div>
           {/* <div>
             <Image

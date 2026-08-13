@@ -25,7 +25,7 @@ const Header = ({
 
   const navText = isLogoTransparent
     ? "text-white md:hover:text-zinc-300"
-    : "text-[#03353B] md:hover:text-[#022a2e]";
+    : "text-brand-azure md:hover:text-brand-azure/80";
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("/#")) {
@@ -122,9 +122,9 @@ const Header = ({
             <button
               className={`${
                 isLogoTransparent
-                  ? "bg-white text-[#03353B]"
-                  : "bg-[#03353B] text-white"
-              } px-8 py-3 rounded-full flex items-center gap-2 text-sm font-bold transition-all group`}
+                  ? "bg-white text-brand-azure hover:bg-brand-orange hover:text-white"
+                  : "bg-brand-azure text-white hover:bg-brand-orange"
+              } px-8 py-3 rounded-full flex items-center gap-2 text-sm font-bold transition-all group cursor-pointer shadow-md`}
             >
               Login
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
